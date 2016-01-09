@@ -1,5 +1,5 @@
-UBUNTU COMMUNITY WORDPRESS THEME
-––––––––––––––––––––––––––––––––
+Ubuntu community teams WordPress theme
+======================================
 
 After setting the theme up
 --------------------------
