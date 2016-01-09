@@ -1,0 +1,450 @@
+/*
+ *  Theme Name: Community theme for Ubuntu
+ *  Description: A simple and beautiful theme inspired by the Ubuntu website. For use of various Ubuntu team who want a somewhat unified look. 
+ *  Author: Pasi Lallinaho
+ *  Author URI: http://open.knome.fi/
+ *  Version: 2014-may
+ *
+ */
+
+body {
+	background-color: #f7f7f7;
+	color: #333;
+
+	font-size: small;
+	font-family: 'Ubuntu', 'Bitstream Vera Sans', 'DejaVu Sans', Tahoma, sans-serif;
+	line-height: 1.4em;
+}
+
+#header,
+#footnote,
+#footer {
+	width: 100%;
+}
+
+#header-wrapper,
+#footnote-wrapper,
+#footer-wrapper {
+	width: 980px;
+	margin: 0 auto;
+}
+
+#notifications,
+#main {
+	width: 920px;
+	margin: 0 auto;
+	padding: 20px 30px;
+}
+
+
+/*  Elements  */
+
+a, a:link, a:visited {
+	color: #dd4814;
+}
+	a:hover, a:active, a:focus {
+		text-decoration: underline;
+	}
+
+strong, b {
+	font-weight: 400;
+}
+
+ol {
+	counter-reset: steps;
+}
+
+ol li {
+	clear: left;
+	display: block;
+	float: left;
+
+	min-height: 80px;
+	margin-bottom: 1em;
+}
+	ol li:before {
+		content: counter(steps);
+		counter-increment: steps;
+
+		display: block;
+		float: left;
+
+		width: 20px;
+		padding: 20px 20px;
+		margin-right: 20px;
+
+		border-radius: 40px;
+
+		background-color: #dd4814;
+		color: #fff;
+
+		font-size: 180%;
+		font-weight: 400;
+
+		line-height: 0.7em;
+	}
+
+	li ol, li ul {
+		margin-bottom: 0;
+	}
+
+/*  Header
+ *
+ */
+
+#header {
+	height: 40px;
+	margin-bottom: 2em;
+
+	background-color: #dd4814;
+	border-bottom: 1px solid #ccc;
+	font-size: 110%;
+}
+
+	#header a:hover,
+	#header a:active,
+	#header a:focus {
+		text-decoration: none;
+	}
+
+/*  Logo  */
+#header-logo {
+	float: right;
+	margin-top: 6px;
+}
+
+/*  Navigation  */
+
+#header-menu {
+	float: left;
+}
+	#header-menu ul,
+	#header-menu li {
+		height: 40px;
+		position: relative;
+	}
+		#header-menu .menu > ul > li:hover,
+		#header-menu ul.menu > li:hover,
+		#header-menu li.current-menu-item a,
+		#header-menu li.currrent-page-ancestor a {
+			background-color: rgba( 0, 0, 0, 0.1 );
+		}
+
+#header-menu .menu > ul,
+#header-menu ul.menu {
+	border-left: 1px solid #b83a10;
+	border-right: 1px solid #ec5b29;
+}
+	#header-menu .menu > ul li,
+	#header-menu ul.menu li {
+		float: left;
+	
+		border-right: 1px solid #b83a10;
+		border-left: 1px solid #ec5b29;
+	}
+		#header-menu .menu > ul li a,
+		#header-menu ul.menu li a {
+			display: block;
+			padding: 0 1em;
+			line-height: 2.7em;
+			color: #fff;
+		}
+			#header-menu .menu > ul li.strong a,
+			#header-menu ul.menu li.strong a {
+				font-weight: 500 !important;
+			}
+
+#header-menu ul.children,
+#header-menu ul.sub-menu {
+	background-color: transparent !important;
+	display: none;
+	width: 250px !important;
+	height: auto;
+
+	position: absolute;
+	z-index: 500;
+	top: 36px;
+	left: -2px;
+	float: left;
+}
+	#header-menu li:hover > ul.children,
+	#header-menu li:hover > ul.sub-menu {
+		display: block;
+	}
+
+	#header-menu ul.children li,
+	#header-menu ul.sub-menu li {
+		background-image: none !important;
+		width: 100%;
+		height: auto;
+		border: none !important;
+	}
+		#header-menu ul.children li:first-child,
+		#header-menu ul.sub-menu li:first-child {
+			background: transparent url(images/submenu-arrow-up.png) 15px 0 no-repeat !important;
+			padding-top: 10px;
+		}
+
+		#header-menu ul.children li a, 
+		#header-menu ul.sub-menu li a {
+			background-color: #fafafa;
+			color: #555;
+			font-size: 90%;
+			border-left: 1px solid #aaa !important;
+			border-right: 1px solid #aaa !important;
+		}
+			#header-menu ul.children li a:hover,
+			#header-menu ul.sub-menu li a:hover {
+				color: #dd4814;
+			}
+			#header-menu ul.children li:first-child a,
+			#header-menu ul.sub-menu li:first-child a {
+				padding-top: 5px;
+				border-top: 1px solid #aaa !important;
+				border-top-left-radius: 6px;
+				border-top-right-radius: 6px;
+			}
+			#header-menu ul.children li:last-child a,
+			#header-menu ul.sub-menu li:last-child a {
+				padding-bottom: 5px;
+				border-bottom: 1px solid #aaa !important;
+				border-bottom-left-radius: 6px;
+				border-bottom-right-radius: 6px;
+				background: #fafafa url(images/submenu-bg.png) 0 100% repeat-x;
+			}
+
+/*  Notifications  */
+#notifications {
+	padding: 15px 30px;
+
+	background-color: #fcfcfc;
+	border: 1px solid #eaeaea;
+	border-top-left-radius: 4px;
+	border-top-right-radius: 4px;
+
+	box-shadow: 0 0 4px #eee;
+}
+	#notifications div.widget + div.widget {
+		margin-top: 0.5em;
+	}
+	#notifications h2 {
+		clear: both;
+		display: inline;
+
+		font-size: 115%;
+		margin: 0 1em 0 0;
+	}
+	#notifications div.textwidget {
+		display: inline;
+
+		color: #555;
+	}
+
+/*  Main  */
+#main {
+	background-color: #fff;
+	border: 1px solid #eaeaea;
+	border-radius: 4px;
+
+	font-size: 105%;
+	font-weight: 300;
+
+	box-shadow: 0 0 4px #eee;
+}
+	#notifications + #main {
+		border-top: none;
+		border-top-left-radius: 0;
+		border-top-right-radius: 0;
+	}
+
+	#main h1,
+	#main h2 {
+		color: #555;
+		margin-bottom: 1em;
+	}
+	#main h1 {
+		font-size: 250%;
+		border: none;
+	}
+		#main h1.post-title {
+			margin-top: 1em;
+		}
+			#main div:first-child h1.post-title {
+				margin-top: 0;
+			}
+	#main h2 {
+		margin-top: 1.5em;
+	}
+
+	body.home #main .entry h1:first-child {
+		margin-top: 0;
+		font-size: 210%;
+	}
+
+	#main img {
+		max-width: 100%;
+		height: auto;
+	}
+
+	#main .post-post {
+		font-size: 120% !important;
+		line-height: 1.6em;
+	}
+		#main .post-post ul {
+			margin-left: 0.7em !important;
+		}
+			#main .post-post ul li {
+				list-style-type: none;
+			}
+				#main .post-post ul li:before {
+					content: "––";
+					padding-right: 0.7em;
+				}
+			#main .post-post li ol,
+			#main .post-post li ul {
+				margin-left: 2em !important;
+			}
+
+
+/*  Footer  */
+
+#footnote,
+#footer {
+	background-color: #f1f1f1;
+	border-radius: 0 !important;
+
+	border-top: 1px solid #ddd;
+	border-bottom: 1px solid #ddd;
+	font-weight: 300;
+	font-size: 90%;
+}
+	#main + #footnote,
+	#main + #footer {
+		margin-top: 2.5em;
+	}
+	#footnote + #footer {
+		border-top: 0;
+	}
+
+	#footnote a,
+	#footer a {
+		color: #333;
+	}
+		#footnote a:hover, #footnote a:active, #footnote a:focus,
+		#footer a:hover, #footer a:active, #footer a:focus {
+			color: #dd4814;
+		}
+
+#footnote {
+	padding: 1.5em 0;
+	line-height: 1.4em;
+}
+	#footnote a {
+		display: block;
+	}
+	#footnote h2 {
+		margin-top: 0;
+		font-size: 110%;
+	}
+	#footnote p {
+		margin-bottom: 0.5em;
+	}
+	#footnote li {
+		text-indent: -1em;
+		margin-left: 1em;
+		line-height: 1.3em;
+		margin-bottom: 0.7em;
+	}
+
+	#footnote #footnote-wrapper {
+		display: table;
+	}
+
+	#footnote div.widget {
+		display: table-cell;
+
+		width: 17.6%;
+		padding: 0 2% 1em 2%;
+		border-right: 1px dotted #bbb;
+	}
+		#footnote div.widget:first-child {
+			padding-left: 0 !important;
+		}
+		#footnote div.widget:last-child {
+			padding-right: 0 !important;
+			border-right: none !important;
+		}
+
+	#footnote .menu li {
+		margin-bottom: 0.3em;
+	}
+	#footnote .sub-menu {
+		margin-top: 0.3em;
+	}
+		
+
+#footer-wrapper {
+	padding: 15px 30px;
+}
+	#footer-wrapper div {
+		display: inline-block;
+	}
+	#footer-wrapper div.widget + div.widget {
+		clear: both;
+		margin-top: 0.7em;
+	}
+
+#footer { }
+	#footer h2 {
+		font-size: 110%;
+		display: inline;
+	}
+		#footer h2:after {
+			content: ":";
+		}
+	#footer ul.menu {
+		display: inline;
+	}
+	#footer li {
+		display: inline;
+		margin-left: 1em;
+	}
+		#footer li:before {
+			content: "|";
+			margin-right: 1em;
+		}
+		#footer li:first-child:before {
+			content: "";
+		}
+	#footer ul.sub-menu {
+		display: none;
+	}
+
+/*  Template styles
+ *
+ */
+
+#main.three-columns .entry div {
+	width: 30%;
+	margin-right: 3%;
+	float: left;
+}
+
+#main.three-columns .entry div:nth-child(1) { width: 31%; }
+#main.three-columns .entry div:nth-child(2) { width: 31%; }
+#main.three-columns .entry div:nth-child(3) { width: 31%; margin-right: 0; }
+
+.flex.sc_columns {
+	margin: 2em 0;
+}
+
+.flex.sc_columns .item :first-child {
+	margin-top: 0 !important;
+}
+.flex.sc_columns .item :last-child {
+	margin-bottom: 0 !important;
+}
+
+.flex.sc_columns .item {
+	margin-right: 2em;
+}
