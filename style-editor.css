@@ -1,0 +1,50 @@
+html {
+	padding: 1em;
+}
+
+body {
+	background-color: #f7f7f7;
+	color: #333;
+
+	font-size: small;
+	font-family: 'Ubuntu', 'Bitstream Vera Sans', 'DejaVu Sans', Tahoma, sans-serif;
+	line-height: 1.4em;
+}
+
+h1,
+h2 {
+	color: #555;
+	margin-bottom: 1em;
+}
+	h1 {
+		font-size: 250%;
+		border: none;
+	}
+	h2 {
+		margin-top: 1.5em;
+	}
+
+	body.home #main .entry h1:first-child {
+		margin-top: 0;
+		font-size: 210%;
+	}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+ul {
+	margin-left: 0.7em !important;
+}
+	ul li {
+		list-style-type: none;
+	}
+		ul li:before {
+			content: "––";
+			padding-right: 0.7em;
+		}
+	li ol,
+	li ul {
+		margin-left: 2em !important;
+	}

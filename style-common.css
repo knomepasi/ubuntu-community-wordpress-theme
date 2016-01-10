@@ -1,0 +1,48 @@
+a, a:link, a:visited {
+	color: #dd4814;
+}
+	a:hover, a:active, a:focus {
+		text-decoration: underline;
+	}
+
+strong, b {
+	font-weight: 400;
+}
+
+ol {
+	counter-reset: steps;
+}
+
+ol li {
+	clear: left;
+	display: block;
+	float: left;
+
+	min-height: 80px;
+	margin-bottom: 1em;
+}
+	ol li:before {
+		content: counter(steps);
+		counter-increment: steps;
+
+		display: block;
+		float: left;
+
+		width: 20px;
+		padding: 20px 20px;
+		margin-right: 20px;
+
+		border-radius: 40px;
+
+		background-color: #dd4814;
+		color: #fff;
+
+		font-size: 180%;
+		font-weight: 400;
+
+		line-height: 0.7em;
+	}
+
+	li ol, li ul {
+		margin-bottom: 0;
+	}

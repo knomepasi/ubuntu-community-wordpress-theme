@@ -45,6 +45,36 @@ if( function_exists( 'register_nav_menu' ) ) {
 }
 
 /*
+ *  Register stylesheets
+ *
+ */
+
+add_action( 'wp_enqueue_scripts', 'ubuntucommunity_scripts' );
+
+function ubuntucommunity_scripts( ) {
+	// Eric Meyer: CSS reset | http://meyerweb.com/eric/thoughts/2007/05/01/reset-reloaded/
+	wp_enqueue_style( 'css-reset', get_stylesheet_directory_uri( ) . '/reset.css' );
+
+	// Main style sheets
+	wp_enqueue_style( 'ubuntucommunity-style-common', get_stylesheet_directory_uri( ) . '/style-common.css' );
+	wp_enqueue_style( 'ubuntucommunity-style', get_stylesheet_directory_uri( ) . '/style.css' );
+
+	// Font stylesheet
+	// "Ubuntu" from Google
+	wp_enqueue_style( 'font-google-ubuntu', '//fonts.googleapis.com/css?family=Ubuntu%3A300%2C400%2C500&#038;ver=1' );
+}
+
+/*
+ *  Register editor stylesheets
+ *
+ */
+
+add_editor_style( 'reset.css' );
+add_editor_style( 'style-common.css' );
+add_editor_style( 'style-editor.css' );
+add_editor_style( '//fonts.googleapis.com/css?family=Ubuntu%3A300%2C400%2C500&#038;ver=1' );
+
+/*
  *  Shortcodes for simple columns
  *
  */
@@ -72,10 +102,6 @@ function ubuntucommunity_columns( $atts, $content, $code ) {
 	$out .= '</div>';
 
 	return $out;
-}
-
-function ubuntucommunity_pages( ) {
-
 }
 
 ?>

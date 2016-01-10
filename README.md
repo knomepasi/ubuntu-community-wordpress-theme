@@ -7,7 +7,6 @@ After setting the theme up
 When the theme is set up, you will want to do the following things first:
 
 ### Create a menu and assign it to the "Header menu" theme location.
-
 **[Appearance » Menus]**  
 It's highly recommended to add the front page as the first item for this menu
 since there is no link to the main page visible by default.
@@ -47,9 +46,9 @@ To create columns in content, use the following markup:
   ///
   ... Column content ...
   [/cols]
-You can add up to four separators (///) to create as many as five columns. If
-you wish to change the separator, edit the 'ubuntucommunity_columns_separator'
-option.
+You can add up to four separators (///) within one [cols] declaration to create
+as many as five columns. If you wish to change the separator, edit the
+'ubuntucommunity_columns_separator' option.
 
 ### Menu CSS classes
 In the menu editing page, show CSS Classes from the screen options. After that,
