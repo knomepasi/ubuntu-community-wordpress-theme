@@ -19,9 +19,13 @@
 				<?php wp_nav_menu( array( 'theme_location' => 'header-menu' ) ); ?>
 			</div>
 			<div id="header-logo">
-				<a href="//ubuntu.com/">
-					<img src="<?php echo get_stylesheet_directory_uri( ); ?>/images/ubuntu-logo.png" alt="Ubuntu">
-				</a>
+				<?php if( get_theme_mod( 'ubuntucommunity_header_logo' ) ) { ?>
+					<img src="<?php echo get_theme_mod( 'ubuntucommunity_header_logo' ); ?>" alt="<?php bloginfo( 'name' ); ?>" />
+				<?php } else { ?>
+					<a href="//ubuntu.com/">
+						<img src="<?php echo get_stylesheet_directory_uri( ); ?>/images/ubuntu-logo.png" alt="Ubuntu">
+					</a>
+				<?php } ?>
 			</div>
 		</div>
 	</div>
