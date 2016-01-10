@@ -3,7 +3,7 @@
  *  Description: A simple and beautiful theme inspired by the Ubuntu website. For use of various Ubuntu team who want a somewhat unified look. 
  *  Author: Pasi Lallinaho
  *  Author URI: http://open.knome.fi/
- *  Version: 2014-may
+ *  Version: 2016-january
  *
  */
 
@@ -16,24 +16,16 @@ body {
 	line-height: 1.4em;
 }
 
-#header,
-#footnote,
-#footer {
+.outside {
 	width: 100%;
 }
 
-#header-wrapper,
-#footnote-wrapper,
-#footer-wrapper {
-	width: 980px;
-	margin: 0 auto;
-}
+.inside {
+	width: 90%;
+	min-width: 960px;
+	max-width: 1600px;
 
-#notifications,
-#main {
-	width: 920px;
 	margin: 0 auto;
-	padding: 20px 30px;
 }
 
 
@@ -71,9 +63,11 @@ body {
 #header-menu {
 	float: left;
 }
-	#header-menu ul,
+	#header-menu ul {
+		position: absolute;
+		top: 0;
+	}
 	#header-menu li {
-		height: 40px;
 		position: relative;
 	}
 		#header-menu .menu > ul > li:hover,
@@ -168,8 +162,6 @@ body {
 
 /*  Notifications  */
 #notifications {
-	padding: 15px 30px;
-
 	background-color: #fcfcfc;
 	border: 1px solid #eaeaea;
 	border-top-left-radius: 4px;
@@ -177,6 +169,9 @@ body {
 
 	box-shadow: 0 0 4px rgba( 0, 0, 0, 0.1 );
 }
+	#notifications .pad {
+		padding: 0.8em 2em;
+	}
 	#notifications div.widget + div.widget {
 		margin-top: 0.5em;
 	}
@@ -204,6 +199,9 @@ body {
 
 	box-shadow: 0 0 4px rgba( 0, 0, 0, 0.1 );
 }
+	#main .pad {
+		padding: 1.5em 2em;
+	}
 	#notifications + #main {
 		border-top: none;
 		border-top-left-radius: 0;
@@ -314,14 +312,14 @@ body {
 		margin-bottom: 0.7em;
 	}
 
-	#footnote #footnote-wrapper {
-		display: table;
+	#footnote .inside {
+		display: flex;
 	}
 
 	#footnote div.widget {
-		display: table-cell;
+		flex: 1;
+		width: 50%;
 
-		width: 17.6%;
 		padding: 0 2% 1em 2%;
 		border-right: 1px dotted #bbb;
 	}
@@ -340,19 +338,16 @@ body {
 		margin-top: 0.3em;
 	}
 		
-
-#footer-wrapper {
-	padding: 15px 30px;
+#footer {
+	padding: 0.8em 0;
 }
-	#footer-wrapper div {
+	#footer .inside div {
 		display: inline-block;
 	}
-	#footer-wrapper div.widget + div.widget {
+	#footer div.widget + div.widget {
 		clear: both;
 		margin-top: 0.7em;
 	}
-
-#footer { }
 	#footer h2 {
 		font-size: 110%;
 		display: inline;

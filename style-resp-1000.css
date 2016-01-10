@@ -1,0 +1,40 @@
+#notifications,
+#main,
+.outside {
+	width: auto;
+	min-width: 600px !important;
+}
+.inside {
+	width: auto;
+	min-width: 0;
+}
+	#footnote .inside,
+	#footer .inside {
+		padding-left: 1.8em;
+		padding-right: 1.8em;
+	}
+
+.pad {
+	padding-left: 1.5em !important;
+	padding-right: 1.5em !important;
+}
+
+#notifications,
+#main {
+	border-radius: 0;
+}
+
+#header {
+	margin-bottom: 0;
+}
+	#header-menu {
+		padding-left: 0.5em;
+	}
+	#header-logo {
+		padding-right: 0.5em;
+	}
+
+#footnote,
+#footer {
+	margin-top: 0 !important;
+}

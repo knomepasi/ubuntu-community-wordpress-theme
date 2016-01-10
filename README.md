@@ -1,6 +1,16 @@
 Ubuntu community teams WordPress theme
 ======================================
 
+Setting up
+----------
+
+1. Copy all the files in the repository in a directory called "ubuntu-community"
+under the wp-content/themes/ directory.
+2. Enable the "Community theme for Ubuntu" theme from Appearance » Themes. If
+you are running multisite, you will need to network enable the theme first under
+Network Admin » Themes.
+
+
 After setting the theme up
 --------------------------
 
@@ -32,12 +42,13 @@ Widget areas
 - Widgets are laid on top of each other
 - Menus are laid out horizontally
 
+**Notifications**
+- Suitable for small excerpts of text
+- Shown at the top of the main content area on every page on the website
+
 
 Additional features
 -------------------
-
-### Notifications
-To add notifications, simply add widgets to the "Notifications" widget area.
 
 ### Autocolumns for content
 To create columns in content, use the following markup:
