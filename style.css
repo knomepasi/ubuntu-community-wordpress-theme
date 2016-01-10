@@ -81,15 +81,15 @@ body {
 
 #header-menu .menu > ul,
 #header-menu ul.menu {
-	border-left: 1px solid #b83a10;
-	border-right: 1px solid #ec5b29;
+	border-left: 1px solid rgba( 0, 0, 0, 0.15 );
+	border-right: 1px solid rgba( 255, 255, 255, 0.15 );
 }
 	#header-menu .menu > ul li,
 	#header-menu ul.menu li {
 		float: left;
 	
-		border-right: 1px solid #b83a10;
-		border-left: 1px solid #ec5b29;
+		border-right: 1px solid rgba( 0, 0, 0, 0.15 );
+		border-left: 1px solid rgba( 255, 255, 255, 0.15 );
 	}
 		#header-menu .menu > ul li a,
 		#header-menu ul.menu li a {
@@ -171,7 +171,7 @@ body {
 	border-top-left-radius: 4px;
 	border-top-right-radius: 4px;
 
-	box-shadow: 0 0 4px #eee;
+	box-shadow: 0 0 4px rgba( 0, 0, 0, 0.1 );
 }
 	#notifications div.widget + div.widget {
 		margin-top: 0.5em;
@@ -198,7 +198,7 @@ body {
 	font-size: 105%;
 	font-weight: 300;
 
-	box-shadow: 0 0 4px #eee;
+	box-shadow: 0 0 4px rgba( 0, 0, 0, 0.1 );
 }
 	#notifications + #main {
 		border-top: none;

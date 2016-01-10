@@ -3,12 +3,10 @@ html {
 }
 
 body {
-	background-color: #f7f7f7;
 	color: #333;
 
 	font-size: small;
 	font-family: 'Ubuntu', 'Bitstream Vera Sans', 'DejaVu Sans', Tahoma, sans-serif;
-	line-height: 1.4em;
 }
 
 h1,
@@ -22,11 +20,6 @@ h2 {
 	}
 	h2 {
 		margin-top: 1.5em;
-	}
-
-	body.home #main .entry h1:first-child {
-		margin-top: 0;
-		font-size: 210%;
 	}
 
 img {
@@ -48,3 +41,15 @@ ul {
 	li ul {
 		margin-left: 2em !important;
 	}
+
+/* editor only */
+body {
+	line-height: 1.6em !important;
+}
+	body > :first-child {
+		margin-top: 0 !important;
+	}
+
+h1, h2, h3, h4, h5, h6 {
+	margin: 0.7em 0;
+}
