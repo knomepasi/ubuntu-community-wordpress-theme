@@ -206,6 +206,10 @@ body {
 		border-top-right-radius: 0;
 	}
 
+	#main h1, #main h2, #main h3, #main h4, #main h5, #main h6 {
+		font-weight: 300;
+	}
+
 	#main h1,
 	#main h2 {
 		color: #555;
@@ -220,6 +224,7 @@ body {
 		}
 			#main div:first-child h1.post-title {
 				margin-top: 0;
+				margin-bottom: 0.7em;
 			}
 	#main h2 {
 		margin-top: 1.5em;
