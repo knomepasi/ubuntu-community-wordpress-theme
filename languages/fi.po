@@ -1,0 +1,100 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-01-13 00:55+0200\n"
+"PO-Revision-Date: 2016-01-13 00:59+0200\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.4\n"
+"Last-Translator: Pasi Lallinaho <pasi@shimmerproject.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: fi\n"
+
+#: content.php:11
+msgid "Read the rest of this article"
+msgstr "Lue loput tästä artikkelista"
+
+#: content.php:22
+msgid "No comments"
+msgstr "Ei kommentteja"
+
+#: content.php:22
+msgid "1 comment"
+msgstr "1 kommentti"
+
+#: content.php:22
+#, php-format
+msgid "%1$s comments"
+msgstr "%1$s kommenttia"
+
+#: functions.php:21
+msgid "Footnote widgets"
+msgstr "Alaviitteen vimpaimet"
+
+#: functions.php:29
+msgid "Notifications"
+msgstr "Ilmoitukset"
+
+#: functions.php:37
+msgid "Footer widgets"
+msgstr "Alatunnisteen vimpaimet"
+
+#: functions.php:53
+msgid "Header Menu"
+msgstr "Ylätunnisteen valikko"
+
+#: functions.php:141
+msgid "Header Background Color"
+msgstr "Ylätunnisteen taustaväri"
+
+#: functions.php:152
+msgid "Navigation Link Color"
+msgstr "Navigointilinkkien väri"
+
+#: functions.php:153
+msgid "The color for hovered menu items in the header dropdown menu."
+msgstr "Yläpalkin pudotusvalikon linkkien väri aktivoituna."
+
+#: functions.php:164
+msgid "Link Color"
+msgstr "Linkkien väri"
+
+#: functions.php:165
+msgid "The color for links in the main content area."
+msgstr "Ensisijaisen sisältöalueen linkkien väri."
+
+#: functions.php:176
+msgid "Footer Link Color"
+msgstr "Alatunnisteen linkkien väri"
+
+#: functions.php:177
+msgid "The color for links in the footer."
+msgstr "Linkkien väri alatunnisteessa."
+
+#: functions.php:187
+msgid "Header logo"
+msgstr "Ylätunnisteen logo"
+
+#: functions.php:188
+msgid ""
+"The logo to show in the right side of the header. If an image is not set, a "
+"Ubuntu logo is used."
+msgstr ""
+"Logo, joka näytetään ylätunnisteen oikeassa reunassa. Jos kuvaa ei ole "
+"määritelty, käytetään Ubuntun logoa."
+
+#: index.php:20
+msgid "Page not found."
+msgstr "Sivua ei löytynyt."
+
+#: index.php:21
+msgid "The page you were looking for was not found."
+msgstr "Sivua, jota etsit, ei löytynyt."

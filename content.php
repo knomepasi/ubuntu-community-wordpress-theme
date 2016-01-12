@@ -8,7 +8,7 @@
 
 		<?php /* post itself */ ?>
 		<div class="post-post">
-			<div class="post-entry entry"><?php the_content( __( 'Read the rest of this article &raquo;', 'ubuntu-teams' ) ); ?></div>
+			<div class="post-entry entry"><?php the_content( __( 'Read the rest of this article', 'ubuntu-community' ) ); ?></div>
 		</div>
 
 		<?php /* post meta data */ ?>
@@ -19,7 +19,7 @@
 				</span>
 				<?php if( !is_single() && !is_page() ) { ?>
 					<span class="comments">
-						&mdash; <?php comments_popup_link( __( 'No comments &raquo;', 'ubuntu-teams' ), __( '1 comment &raquo;', 'ubuntu-teams' ), sprintf( __( '%1$s comments &raquo;', 'ubuntu-teams' ), "%" ) ); ?>
+						&mdash; <?php comments_popup_link( __( 'No comments', 'ubuntu-community' ), __( '1 comment', 'ubuntu-community' ), sprintf( __( '%1$s comments', 'ubuntu-community' ), "%" ) ); ?>
 					</span>
 				<?php } ?>
 				<br />
