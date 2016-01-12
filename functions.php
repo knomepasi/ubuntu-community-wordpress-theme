@@ -1,6 +1,17 @@
 <?php
 
 /*
+ *  Set the textdomain for translations
+ *
+ */
+
+add_action( 'after_setup_theme', 'ubuntucommunity_textdomain' );
+
+function ubuntucommunity_textdomain( ) {
+	load_theme_textdomain( 'ubuntu-community', get_template_directory( ) . '/languages' );
+}
+
+/*
  *  Register widget areas
  *
  */
