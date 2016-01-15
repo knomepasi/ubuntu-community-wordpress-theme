@@ -9,12 +9,11 @@
 			}
 		}
 	?>
-	</div>
 
 	<div id="main" class="inside"><div class="pad">
 		<?php
 			if( have_posts( ) ) {
-				get_template_part( 'content', get_post_format( ) );
+				get_template_part( 'content' );
 			} else {
 				?><div class="notfound">
 					<h3><?php _e( 'Page not found.', 'ubuntu-community' ); ?></h3>
@@ -22,6 +21,6 @@
 				</div><?php
 			}
 		?>
-	</div></div></div>
+	</div></div>
 
 <?php get_footer( ); ?>

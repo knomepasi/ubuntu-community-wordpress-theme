@@ -120,6 +120,11 @@ function ubuntucommunity_columns( $atts, $content, $code ) {
 
 /*
  *  Add some customization options for the theme
+ *  - Header background color
+ *  - Header navigation link color
+ *  - Main content area link color
+ *  - Footer link color
+ *  - Show/hide authors for posts
  *
  */
 
@@ -189,6 +194,16 @@ function ubuntucommunity_customize_register( $wp_customize ) {
 		'section'     => 'ubuntucommunity',
 		'height'      => '25'
 	) ) );
+
+	$wp_customize->add_setting( 'ubuntucommunity_showauthor', array(
+		'default'           => false,
+	) );
+
+	$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'ubuntucommunity_showauthor', array(
+		'type'        => 'checkbox',
+		'label'       => __( 'Show authors for posts?', 'ubuntu-community' ),
+		'section'     => 'ubuntucommunity',
+	) ) );
 }
 
 add_action( 'customize_preview_init', 'ubuntucommunity_customize_preview_js' );
@@ -227,6 +242,37 @@ add_action( 'admin_enqueue_scripts', 'ubuntucommunity_admin_scripts' );
 
 function ubuntucommunity_admin_scripts( ) {
 	wp_enqueue_style( 'ubuntucommunity-style-admin', get_stylesheet_directory_uri( ) . '/style-admin.css' );
+}
+
+/*
+ *
+ *
+ */
+
+function ubuntucommunity_alphabetical_terms( ) {
+	$tags = get_the_tags( );
+	$cats = get_the_category( );
+
+	if( is_array( $tags ) && is_array( $cats ) ) {
+		$terms = array_merge( $tags, $cats );
+		usort( $terms, 'ubuntucommunity_sort_terms' );
+	} elseif( is_array( $tags ) ) {
+		$terms = $tags;
+	} elseif( is_array( $cats ) ) {
+		$terms = $cats;
+	}
+
+	if( is_array( $terms ) ) {
+		foreach( $terms as $term ) {
+			$out[] = '<a href="' . get_term_link( $term ) . '">' . $term->name . '</a>';
+		}
+
+		print implode( ', ', $out );
+	}
+}
+
+function ubuntucommunity_sort_terms( $a, $b ) {
+	return strcasecmp( $a->name, $b->name );
 }
 
 ?>
