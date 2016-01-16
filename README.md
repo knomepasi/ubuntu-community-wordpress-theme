@@ -14,7 +14,7 @@ Network Admin » Themes.
 After setting the theme up
 --------------------------
 
-When the theme is set up, you will want to do the following things first:
+When the theme is set up, you might want to do the following things:
 
 ### Create a menu and assign it to the "Header menu" theme location.
 **[Appearance » Menus]**  
@@ -63,8 +63,11 @@ as many as five columns. If you wish to change the separator, edit the
 
 ### Menu CSS classes
 In the menu editing page, show CSS Classes from the screen options. After that,
-you can use the following CSS classes to change the appearance of menu items:
-	strong		Makes the text bold
+you can use the following CSS classes to change the appearance of menu item:  
+
+Class    | Effect
+-------- | -------------------
+strong   | Makes the text bold
 
 ### Customizable colors and the header logo
 If you don't want to use the Ubuntu orange in your site, or want to change the
