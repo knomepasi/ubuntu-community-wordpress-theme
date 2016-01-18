@@ -21,5 +21,18 @@
 		</div>
 	<?php } ?>
 
-	<?php comment_form( ); ?>
+	<div id="reply" class="comment group">
+		<?php
+			comment_form( array(
+				'comment_field' => '<textarea id="comment" name="comment" cols="45" rows="5" aria-required="true" placeholder="' . _x( 'Comment', 'noun' ) . '"></textarea>',
+				'comment_notes_before' => null,
+				'comment_notes_after' => '<div style="clear: both;"></div>',
+				'fields' => array(
+					'author' => '<span class="comment-author"><input id="author" name="author" type="text" size="30" aria-required="true" required="required" placeholder="' . __( 'Name', 'domainreference' ) . '" /></span><br />',
+					'email' => '<span class="comment-email"><input id="email" name="email" type="text" value="" size="30" aria-describedby="email-notes" aria-required="true" required="required" placeholder="' . __( 'Email', 'domainreference' ) . '" /></span><br />',
+					'noform-description' => '<span class="comment-description">' . __( 'All fields are required. Your email address will not be published.', 'ubuntu-community' ) . '</span>',
+				),
+			) );
+		?>
+	</div>
 </div>

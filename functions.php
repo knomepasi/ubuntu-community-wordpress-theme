@@ -245,7 +245,7 @@ function ubuntucommunity_admin_scripts( ) {
 }
 
 /*
- *
+ *  Add functions to show all categories and tags sorted alphabetically
  *
  */
 
@@ -273,6 +273,29 @@ function ubuntucommunity_alphabetical_terms( ) {
 
 function ubuntucommunity_sort_terms( $a, $b ) {
 	return strcasecmp( $a->name, $b->name );
+}
+
+/*
+ *  Small changes to the comment form output format
+ *
+ */
+
+add_action( 'comment_form_before_fields', 'ubuntucommunity_comment_form_before_fields' );
+
+function ubuntucommunity_comment_form_before_fields( ) {
+	echo '<div class="comment-meta">';
+}
+
+add_action( 'comment_form_after_fields', 'ubuntucommunity_comment_form_after_fields' );
+
+function ubuntucommunity_comment_form_after_fields( ) {
+	echo '</div>';
+}
+
+add_filter( 'comment_form_logged_in', 'ubuntucommunity_comment_form_logged_in' );
+
+function ubuntucommunity_comment_form_logged_in( $logged_in_text ) {
+	return '<div class="comment-meta">' . $logged_in_text . '</div>';
 }
 
 ?>
