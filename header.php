@@ -6,6 +6,7 @@
 
 	<meta name="copyright" content="&copy; Pasi Lallinaho and Canonical Ltd." />
 	<meta name="description" content="<?php bloginfo( 'name' ); ?><?php if( strlen( get_bloginfo( 'description' ) ) > 0 ) { ?> – <?php bloginfo( 'description' ); } ?>" />
+	<meta name="viewport" content="width=device-width, maximum-scale=1.0, minimum-scale=1.0, initial-scale=1" />
 
 	<?php wp_head( ); ?>
 </head>
