@@ -14,7 +14,7 @@
 <body <?php body_class( ); ?>>
 
 	<div id="header" class="outside group"><div class="inside">
-		<div id="header-menu">
+		<div id="header-menu" class="group">
 			<?php wp_nav_menu( array( 'theme_location' => 'header-menu' ) ); ?>
 		</div>
 		<div id="header-logo">

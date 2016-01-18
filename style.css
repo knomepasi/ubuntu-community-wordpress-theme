@@ -34,15 +34,15 @@ body {
  */
 
 #header {
-	height: 40px;
-	overflow: hidden;
-
-	margin-bottom: 2em;
-
 	background-color: #dd4814;
 	border-bottom: 1px solid #ccc;
-	font-size: 110%;
+
+	margin-bottom: 2em;
 }
+	#header .inside {
+		height: 40px;
+		font-size: 110%;
+	}
 
 	#header a:hover,
 	#header a:active,
@@ -68,21 +68,21 @@ body {
 }
 	#header-menu .menu > ul,
 	#header-menu ul.menu {
-		position: absolute;
+		position: relative;
 		top: 0;
 		margin: 0;
 
 		height: 40px;
 	}
-	#header-menu li {
-		position: relative;
-	}
-		#header-menu .menu > ul > li:hover,
-		#header-menu ul.menu > li:hover,
-		#header-menu li.current-menu-item a,
-		#header-menu li.currrent-page-ancestor a {
-			background-color: rgba( 0, 0, 0, 0.1 );
+		#header-menu li {
+			position: relative;
 		}
+			#header-menu .menu > ul > li:hover,
+			#header-menu ul.menu > li:hover,
+			#header-menu li.current-menu-item a,
+			#header-menu li.currrent-page-ancestor a {
+				background-color: rgba( 0, 0, 0, 0.1 );
+			}
 
 #header-menu .menu > ul,
 #header-menu ul.menu {
