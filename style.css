@@ -35,6 +35,8 @@ body {
 
 #header {
 	height: 40px;
+	overflow: hidden;
+
 	margin-bottom: 2em;
 
 	background-color: #dd4814;
@@ -51,7 +53,8 @@ body {
 /*  Logo  */
 #header-logo {
 	float: right;
-	margin-top: 6px;
+	padding: 6px 0;
+	height: 28px;
 }
 	#header-logo img {
 		max-height: 25px;
@@ -63,9 +66,13 @@ body {
 #header-menu {
 	float: left;
 }
-	#header-menu ul {
+	#header-menu .menu > ul,
+	#header-menu ul.menu {
 		position: absolute;
 		top: 0;
+		margin: 0;
+
+		height: 40px;
 	}
 	#header-menu li {
 		position: relative;
@@ -85,6 +92,7 @@ body {
 	#header-menu .menu > ul li,
 	#header-menu ul.menu li {
 		float: left;
+		line-height: 1.8em;
 	
 		border-right: 1px solid rgba( 0, 0, 0, 0.15 );
 		border-left: 1px solid rgba( 255, 255, 255, 0.15 );
@@ -92,8 +100,8 @@ body {
 		#header-menu .menu > ul li a,
 		#header-menu ul.menu li a {
 			display: block;
-			padding: 0 1em;
-			line-height: 2.7em;
+			padding: 7px 1em;
+			height: 26px;
 			color: #fff;
 		}
 			#header-menu .menu > ul li.strong a,
@@ -139,6 +147,7 @@ body {
 			font-size: 90%;
 			border-left: 1px solid #aaa !important;
 			border-right: 1px solid #aaa !important;
+			padding: 2px 1em;
 		}
 			#header-menu ul.children li a:hover,
 			#header-menu ul.sub-menu li a:hover {
@@ -146,14 +155,14 @@ body {
 			}
 			#header-menu ul.children li:first-child a,
 			#header-menu ul.sub-menu li:first-child a {
-				padding-top: 5px;
+				padding-top: 7px;
 				border-top: 1px solid #aaa !important;
 				border-top-left-radius: 6px;
 				border-top-right-radius: 6px;
 			}
 			#header-menu ul.children li:last-child a,
 			#header-menu ul.sub-menu li:last-child a {
-				padding-bottom: 5px;
+				padding-bottom: 7px;
 				border-bottom: 1px solid #aaa !important;
 				border-bottom-left-radius: 6px;
 				border-bottom-right-radius: 6px;

@@ -13,7 +13,7 @@
 
 <body <?php body_class( ); ?>>
 
-	<div id="header" class="outside"><div class="inside">
+	<div id="header" class="outside group"><div class="inside">
 		<div id="header-menu">
 			<?php wp_nav_menu( array( 'theme_location' => 'header-menu' ) ); ?>
 		</div>
