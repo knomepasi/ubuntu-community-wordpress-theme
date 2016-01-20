@@ -70,9 +70,8 @@ function ubuntucommunity_scripts( ) {
 	wp_enqueue_style( 'ubuntucommunity-style-common', get_stylesheet_directory_uri( ) . '/style-common.css', array( 'css-reset' ) );
 	wp_enqueue_style( 'ubuntucommunity-style', get_stylesheet_directory_uri( ) . '/style.css', array( 'css-reset' ) );
 
-	// Font stylesheet
-	// "Ubuntu" from Google
-	wp_enqueue_style( 'font-google-ubuntu', '//fonts.googleapis.com/css?family=Ubuntu%3A300%2C400%2C500&#038;ver=1' );
+	// Font stylesheets
+	wp_enqueue_style( 'font-ubuntu', get_stylesheet_directory_uri( ) . '/style-font-ubuntu.css' );
 
 	// Responsive design
 	wp_enqueue_style( 'ubuntucommunity-style-resp-1000', get_stylesheet_directory_uri( ) . '/style-resp-1000.css', array( 'ubuntucommunity-style' ), null, 'only screen and (max-width:1000px)' );
@@ -87,7 +86,7 @@ function ubuntucommunity_scripts( ) {
 add_editor_style( 'reset.css' );
 add_editor_style( 'style-common.css' );
 add_editor_style( 'style-editor.css' );
-add_editor_style( '//fonts.googleapis.com/css?family=Ubuntu%3A300%2C400%2C500&#038;ver=1' );
+add_editor_style( 'style-font-ubuntu.css' );
 
 /*
  *  Shortcodes for simple columns

@@ -9,6 +9,10 @@ strong, b {
 	font-weight: 400;
 }
 
+em, i {
+	font-style: italic;
+}
+
 ol {
 	margin-left: 0.7em;
 	counter-reset: steps;
