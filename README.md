@@ -1,6 +1,8 @@
 Ubuntu community teams WordPress theme
 ======================================
 
+[Screenshot of the theme](screenshot.png?raw=true)
+
 Setting up
 ----------
 
