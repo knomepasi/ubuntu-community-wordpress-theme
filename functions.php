@@ -262,7 +262,7 @@ function ubuntucommunity_alphabetical_terms( ) {
 		$terms = $cats;
 	}
 
-	if( is_array( $terms ) ) {
+	if( is_array( $terms ) && count( $terms ) > 0 ) {
 		foreach( $terms as $term ) {
 			$out[] = '<a href="' . get_term_link( $term ) . '">' . $term->name . '</a>';
 		}
