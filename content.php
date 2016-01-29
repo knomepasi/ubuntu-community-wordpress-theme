@@ -1,7 +1,7 @@
 <?php while( have_posts( ) ) { ?>
 	<?php the_post( ); ?>
 
-	<div <?php post_class( 'group uc-article' ) ?>>
+	<div <?php post_class( 'group uc-content-block' ) ?>>
 		<?php if( !is_front_page( ) ) { ?>
 			<?php if( is_singular( ) ) { ?>
 				<h1 class="post-title"><?php the_title( ); ?></h1>

@@ -13,7 +13,11 @@
 	<div id="main" class="inside"><div class="pad">
 		<?php
 			if( have_posts( ) ) {
-				get_template_part( 'content' );
+				if( is_archive( ) ) {
+					get_template_part( 'content', 'archive' );
+				} else {
+					get_template_part( 'content' );
+				}
 			} else {
 				?><div class="notfound">
 					<h3><?php _e( 'Page not found.', 'ubuntu-community' ); ?></h3>

@@ -256,17 +256,17 @@ body {
 		height: auto;
 	}
 
-	#main .uc-article {
+	#main .uc-content-block {
 		margin-top: 2.5em;
 		padding-top: 1.5em;
 		border-top: 1px dashed #ddd;
 	}
-		#main .uc-article:first-child {
+		#main .uc-content-block:first-child {
 			border: none;
 			padding-top: 0;
 			margin-top: 0;
 		}
-		#main .uc-article:last-child {
+		#main .uc-content-block:last-child {
 			padding-bottom: 1em;
 		}
 
@@ -388,6 +388,20 @@ body {
 		font-size: 90%;
 		line-height: 1.4em;
 		color: #777;
+	}
+
+/*  Main: archive  */
+
+.uc-archive-list {
+	color: #888;
+	font-size: 110%;
+	line-height: 1.4em;
+}
+	.uc-archive-list li {
+		margin-bottom: 1em;
+	}
+	.uc-archive-list span.post-title {
+		font-size: 140%;
 	}
 
 /*  Footer  */
