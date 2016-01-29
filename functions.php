@@ -298,4 +298,18 @@ function ubuntucommunity_comment_form_logged_in( $logged_in_text ) {
 	return '<div class="comment-meta">' . $logged_in_text . '</div>';
 }
 
+/*
+ *  Always show all posts on archive pages
+ *
+ */
+
+add_action( 'pre_get_posts', 'ubuntucommunity_articles_filters' );
+
+function ubuntucommunity_articles_filters( $query ) {
+	if( is_archive( ) && $query->is_main_query( ) ) {
+		$query->set( 'posts_per_page', -1 );
+		return;
+	}
+}
+
 ?>
