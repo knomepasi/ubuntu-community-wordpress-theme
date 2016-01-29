@@ -7,30 +7,71 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-01-13 00:55+0200\n"
-"PO-Revision-Date: 2016-01-13 00:59+0200\n"
+"POT-Creation-Date: 2016-01-29 14:46+0200\n"
+"PO-Revision-Date: 2016-01-29 14:47+0200\n"
+"Last-Translator: Pasi Lallinaho <pasi@shimmerproject.org>\n"
 "Language-Team: \n"
+"Language: fi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 1.8.4\n"
-"Last-Translator: Pasi Lallinaho <pasi@shimmerproject.org>\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"Language: fi\n"
 
-#: content.php:11
+#: comments.php:5
+msgid "Discussion"
+msgstr "Keskustelu"
+
+#: comments.php:27
+msgctxt "noun"
+msgid "Comment"
+msgstr "Kommentti"
+
+#: comments.php:31
+msgid "Name"
+msgstr "Nimi"
+
+#: comments.php:32
+msgid "Email"
+msgstr "Sähköpostiosoite"
+
+#: comments.php:33
+msgid "All fields are required. Your email address will not be published."
+msgstr "Kaikki kentät on pakollisia. Sähköpostiosoitettasi ei julkaista."
+
+#: content-archive.php:11
+#, php-format
+msgid "All articles for %s"
+msgstr "Kaikki artikkelit: %s"
+
+#: content-archive.php:13
+msgid "Archive"
+msgstr "Arkisto"
+
+#: content-archive.php:17
+#, php-format
+msgid "Search results for \"%s\""
+msgstr "Hakutulokset: %s"
+
+#: content.php:17
+#, php-format
+msgctxt "post meta: author, formatted date"
+msgid "By %s on %s"
+msgstr "Kirjoittanut %s, %s"
+
+#: content.php:25
 msgid "Read the rest of this article"
 msgstr "Lue loput tästä artikkelista"
 
-#: content.php:22
+#: content.php:33
 msgid "No comments"
 msgstr "Ei kommentteja"
 
-#: content.php:22
+#: content.php:33
 msgid "1 comment"
 msgstr "1 kommentti"
 
-#: content.php:22
+#: content.php:33
 #, php-format
 msgid "%1$s comments"
 msgstr "%1$s kommenttia"
@@ -51,39 +92,39 @@ msgstr "Alatunnisteen vimpaimet"
 msgid "Header Menu"
 msgstr "Ylätunnisteen valikko"
 
-#: functions.php:141
+#: functions.php:146
 msgid "Header Background Color"
 msgstr "Ylätunnisteen taustaväri"
 
-#: functions.php:152
+#: functions.php:157
 msgid "Navigation Link Color"
 msgstr "Navigointilinkkien väri"
 
-#: functions.php:153
+#: functions.php:158
 msgid "The color for hovered menu items in the header dropdown menu."
 msgstr "Yläpalkin pudotusvalikon linkkien väri aktivoituna."
 
-#: functions.php:164
+#: functions.php:169
 msgid "Link Color"
 msgstr "Linkkien väri"
 
-#: functions.php:165
+#: functions.php:170
 msgid "The color for links in the main content area."
 msgstr "Ensisijaisen sisältöalueen linkkien väri."
 
-#: functions.php:176
+#: functions.php:181
 msgid "Footer Link Color"
 msgstr "Alatunnisteen linkkien väri"
 
-#: functions.php:177
+#: functions.php:182
 msgid "The color for links in the footer."
 msgstr "Linkkien väri alatunnisteessa."
 
-#: functions.php:187
+#: functions.php:192
 msgid "Header logo"
 msgstr "Ylätunnisteen logo"
 
-#: functions.php:188
+#: functions.php:193
 msgid ""
 "The logo to show in the right side of the header. If an image is not set, a "
 "Ubuntu logo is used."
@@ -91,10 +132,14 @@ msgstr ""
 "Logo, joka näytetään ylätunnisteen oikeassa reunassa. Jos kuvaa ei ole "
 "määritelty, käytetään Ubuntun logoa."
 
-#: index.php:20
+#: functions.php:204
+msgid "Show authors for posts?"
+msgstr "Näytä kirjoittajan tiedot artikkeleiden yhteydessä?"
+
+#: index.php:23
 msgid "Page not found."
 msgstr "Sivua ei löytynyt."
 
-#: index.php:21
+#: index.php:24
 msgid "The page you were looking for was not found."
 msgstr "Sivua, jota etsit, ei löytynyt."
