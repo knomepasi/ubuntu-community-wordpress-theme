@@ -133,8 +133,12 @@ body {
 		background-image: none !important;
 		width: 100%;
 		height: auto;
-		border: none !important;
 	}
+		#header-menu ul.children > li,
+		#header-menu ul.sub-menu > li {
+			border: none;
+		}
+
 		#header-menu ul.children li:first-child,
 		#header-menu ul.sub-menu li:first-child {
 			background: transparent url(images/submenu-arrow-up.png) 15px 0 no-repeat !important;
@@ -146,8 +150,8 @@ body {
 			background-color: #fafafa;
 			color: #555;
 			font-size: 90%;
-			border-left: 1px solid #aaa !important;
-			border-right: 1px solid #aaa !important;
+			border-left: 1px solid #aaa;
+			border-right: 1px solid #aaa;
 			padding: 2px 1em;
 		}
 			#header-menu ul.children li a:hover,
@@ -157,17 +161,17 @@ body {
 			#header-menu ul.children li:first-child a,
 			#header-menu ul.sub-menu li:first-child a {
 				padding-top: 7px;
-				border-top: 1px solid #aaa !important;
+				border-top: 1px solid #aaa;
 				border-top-left-radius: 6px;
 				border-top-right-radius: 6px;
 			}
 			#header-menu ul.children li:last-child a,
 			#header-menu ul.sub-menu li:last-child a {
 				padding-bottom: 7px;
-				border-bottom: 1px solid #aaa !important;
+				border-bottom: 1px solid #aaa;
 				border-bottom-left-radius: 6px;
 				border-bottom-right-radius: 6px;
-				background: #fafafa url(images/submenu-bg.png) 0 100% repeat-x;
+				background: inherit url(images/submenu-bg.png) 0 100% repeat-x;
 			}
 
 /*  Notifications  */
@@ -421,7 +425,7 @@ body {
 		margin-top: 2.5em;
 	}
 	#footnote + #footer {
-		border-top: 0;
+		border-top: none;
 	}
 
 	#footnote a,

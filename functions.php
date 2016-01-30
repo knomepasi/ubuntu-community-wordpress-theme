@@ -70,6 +70,11 @@ function ubuntucommunity_scripts( ) {
 	wp_enqueue_style( 'ubuntucommunity-style-common', get_stylesheet_directory_uri( ) . '/style-common.css', array( 'css-reset' ) );
 	wp_enqueue_style( 'ubuntucommunity-style', get_stylesheet_directory_uri( ) . '/style.css', array( 'css-reset' ) );
 
+	// Dark variant
+	if( get_theme_mod( 'ubuntucommunity_darkvariant' ) == true ) {
+		wp_enqueue_style( 'ubuntucommunity-style-dark', get_stylesheet_directory_uri( ) . '/style-dark.css', array( 'ubuntucommunity-style' ) );
+	}
+
 	// Font stylesheets
 	wp_enqueue_style( 'font-ubuntu', get_stylesheet_directory_uri( ) . '/style-font-ubuntu.css' );
 
@@ -193,6 +198,16 @@ function ubuntucommunity_customize_register( $wp_customize ) {
 		'description' => __( 'The logo to show in the right side of the header. If an image is not set, a Ubuntu logo is used.', 'ubuntu-community' ),
 		'section'     => 'ubuntucommunity',
 		'height'      => '25'
+	) ) );
+
+	$wp_customize->add_setting( 'ubuntucommunity_darkvariant', array(
+		'default'           => false,
+	) );
+
+	$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'ubuntucommunity_darkvariant', array(
+		'type'        => 'checkbox',
+		'label'       => __( 'Use the dark background variant?', 'ubuntu-community' ),
+		'section'     => 'ubuntucommunity',
 	) ) );
 
 	$wp_customize->add_setting( 'ubuntucommunity_showauthor', array(
