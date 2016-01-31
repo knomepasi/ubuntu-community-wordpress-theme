@@ -312,19 +312,19 @@ body {
 	line-height: 1.4em;
 }
 	#comments h2 {
-		color: #aea79f;
+		color: #aea79f; /* TODO */
 
 		margin: 2em 0 0 0;
 		padding: 0 0 0.5em 0;
 
-		border-bottom: 1px solid #d7d7d7;
+		border-bottom: 1px solid rgba( 0, 0, 0, 0.1 );
 	}
 	.comment {
 		padding: 0.7em 1em;
-		border-bottom: 1px solid #d7d7d7;
+		border-bottom: 1px solid rgba( 0, 0, 0, 0.1 );
 	}
 		.comment.comment-author-logged {
-			background-color: #f2f1f0;
+			background-color: rgba( 0, 0, 0, 0.1 );
 		}
 		.comment-meta {
 			box-sizing: border-box;
@@ -363,14 +363,13 @@ body {
 		border: none;
 		padding: 0.5em;
 		margin: 0 0 0.5em 0;
-		background-color: #f6f6f5;
+		background-color: rgba( 0, 0, 0, 0.1 );
 
 		font-family: 'Ubuntu', 'Bitstream Vera Sans', 'DejaVu Sans', Tahoma, sans-serif;
 	}
 		#reply input[type="submit"] {
 			width: 200px;
 			float: right;
-			background-color: #e2e0dd;
 		}
 		#reply textarea {
 			font-size: 100%;

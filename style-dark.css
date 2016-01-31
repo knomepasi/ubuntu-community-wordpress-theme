@@ -1,5 +1,5 @@
 body {
-	background-color: #555;
+	background-color: #4a4a4a;
 }
 
 #header {
@@ -18,14 +18,14 @@ body {
 	color: #ddd;
 }
 	#notifications {
-		background-color: #2a2a2a;
+		background-color: #333;
 	}
 		#notifications div.textwidget {
 			color: #aaa;
 		}
 
 	#main {
-		background-color: #333;
+		background-color: #2a2a2a;
 	}
 		#main h1, #main h2 {
 			color: #eee;
@@ -33,6 +33,24 @@ body {
 		#main .uc-content-block {
 			border-color: #111;
 		}
+
+#comments { }
+	#comments h2,
+	.comment {
+		border-color: rgba( 255, 255, 255, 0.1 );
+	}
+
+	.comment.comment-author-logged {
+		background-color: rgba( 0, 0, 0, 0.2 );
+	}
+
+	#reply input,
+	#reply textarea {
+		color: #ddd;
+		background-color: rgba( 0, 0, 0, 0.2 );
+	}
+
+
 
 #footnote,
 #footer {
