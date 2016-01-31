@@ -2,7 +2,7 @@
 	<?php the_post( ); ?>
 
 	<div <?php post_class( 'group uc-content-block' ) ?>>
-		<?php if( !is_front_page( ) ) { ?>
+		<?php if( !is_front_page( ) || ( is_front_page( ) && is_home( ) ) ) { ?>
 			<?php if( is_singular( ) ) { ?>
 				<h1 class="post-title"><?php the_title( ); ?></h1>
 			<?php } else { ?>
