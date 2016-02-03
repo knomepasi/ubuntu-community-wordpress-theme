@@ -12,6 +12,12 @@ body {
 		border-color: #777 !important;
 	}
 
+		/* TODO: Fallback menu */
+		#header-menu li.menu-item-has-children:hover:after {
+			background-color: #444;
+			border-color: #777;
+		}
+
 #notifications,
 #main {
 	border-color: #333;
