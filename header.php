@@ -19,7 +19,9 @@
 		</div>
 		<div id="header-logo">
 			<?php if( get_theme_mod( 'ubuntucommunity_header_logo' ) ) { ?>
-				<img src="<?php echo get_theme_mod( 'ubuntucommunity_header_logo' ); ?>" alt="<?php bloginfo( 'name' ); ?>" />
+				<a href="<?php echo home_url( '/' ); ?>">
+					<img src="<?php echo get_theme_mod( 'ubuntucommunity_header_logo' ); ?>" alt="<?php bloginfo( 'name' ); ?>" />
+				</a>
 			<?php } else { ?>
 				<a href="//ubuntu.com/">
 					<img src="<?php echo get_stylesheet_directory_uri( ); ?>/images/ubuntu-logo.png" alt="Ubuntu">
