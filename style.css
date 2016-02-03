@@ -184,7 +184,7 @@ body {
 				border-bottom: 1px solid #aaa;
 				border-bottom-left-radius: 6px;
 				border-bottom-right-radius: 6px;
-				background: inherit url(images/submenu-bg.png) 0 100% repeat-x;
+				background: #fafafa linear-gradient( to top, rgba( 0, 0, 0, 0.05 ), rgba( 0, 0, 0, 0 ) 30% );
 			}
 
 /*  Notifications  */

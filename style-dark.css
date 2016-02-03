@@ -18,6 +18,11 @@ body {
 			border-color: #777;
 		}
 
+		#header-menu ul.children li:last-child a,
+		#header-menu ul.sub-menu li:last-child a {
+			background-color: #444;
+		}
+
 #notifications,
 #main {
 	border-color: #333;
