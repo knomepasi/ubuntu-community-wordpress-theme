@@ -482,11 +482,11 @@ body {
 		border-right: 1px dotted #bbb;
 	}
 		#footnote div.widget:first-child {
-			padding-left: 0 !important;
+			padding-left: 0;
 		}
 		#footnote div.widget:last-child {
-			padding-right: 0 !important;
-			border-right: none !important;
+			padding-right: 0;
+			border-right-width: 0;
 		}
 
 	#footnote li,
