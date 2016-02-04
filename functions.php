@@ -82,6 +82,9 @@ function ubuntucommunity_scripts( ) {
 	wp_enqueue_style( 'ubuntucommunity-style-resp-1000', get_stylesheet_directory_uri( ) . '/style-resp-1000.css', array( 'ubuntucommunity-style' ), null, 'only screen and (max-width:1000px)' );
 	wp_enqueue_style( 'ubuntucommunity-style-resp-800', get_stylesheet_directory_uri( ) . '/style-resp-800.css', array( 'ubuntucommunity-style', 'ubuntucommunity-style-resp-1000' ), null, 'only screen and (max-width:800px)' );
 	wp_enqueue_style( 'ubuntucommunity-style-resp-640', get_stylesheet_directory_uri( ) . '/style-resp-640.css', array( 'ubuntucommunity-style', 'ubuntucommunity-style-resp-800' ), null, 'only screen and (max-width:640px)' );
+
+	// JS
+	wp_enqueue_script( 'ubuntucommunity-js-menu', get_stylesheet_directory_uri( ) . '/script-menu.js', array( 'jquery' ) );
 }
 
 /*

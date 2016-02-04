@@ -7,6 +7,11 @@
 
 /* Header */
 
+/* TODO
+ * Move this into another CSS file, and load it with JS when the menu +
+ * logo would not fit in the viewport 
+ */
+
 #header .inside {
 	height: auto;
 }
@@ -15,13 +20,39 @@
 		float: none;
 	}
 		#header-logo {
-			max-width: 80%;
-			margin: 0 1.75em;
+			padding: 0;
+			height: auto;
 		}
+			#header-logo img {
+				max-width: 80%;
+			}
+			#header-logo a {
+				display: block;
+				padding: 0.4em 1.75em;
+			}
+				#header-logo a:after {
+					content: "›";
+					float: right;
+					transform: rotate( 90deg );
+					transition: all 200ms;
+
+					margin-top: 0.15em;
+					font-size: 300%;
+					color: #fff;
+				}
+				#header.menu-open #header-logo a:after {
+					transform: rotate( 270deg );
+				}
+
 		#header-menu {
 			border-top: 1px solid rgba( 0, 0, 0, 0.15 );
 			padding-left: 0;
+
+			display: none;
 		}
+			#header.menu-open #header-menu {
+				display: block;
+			}
 			#header-menu li,
 			#header-menu ul.children,
 			#header-menu ul.sub-menu {
