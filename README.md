@@ -2,7 +2,8 @@ Ubuntu community teams WordPress theme
 ======================================
 
 A simple and beautiful theme inspired by the Ubuntu website and designed for
-Ubuntu community teams. Features responsive design and more.
+Ubuntu community teams. Features responsive design, support for RTL languages,
+customization of colors and more.
 
 [Screenshot of the theme](screenshot.png?raw=true)
 
