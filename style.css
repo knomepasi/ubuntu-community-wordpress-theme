@@ -130,7 +130,6 @@ body {
 
 	#header-menu ul.children li,
 	#header-menu ul.sub-menu li {
-		background-image: none !important;
 		width: 100%;
 		height: auto;
 	}
@@ -513,19 +512,19 @@ body {
 	}
 		#footer h2:after {
 			content: ":";
+			margin-right: 2em;
 		}
 	#footer ul.menu {
-		display: inline;
+		display: inline-block;
 	}
 	#footer li {
 		display: inline;
-		margin-left: 1em;
 	}
-		#footer li:before {
+		#footer li:after {
 			content: "|";
-			margin-right: 1em;
+			padding: 0 1em;
 		}
-		#footer li:first-child:before {
+		#footer li:last-child:after {
 			content: "";
 		}
 	#footer ul.sub-menu {
