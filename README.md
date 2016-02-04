@@ -1,6 +1,9 @@
 Ubuntu community teams WordPress theme
 ======================================
 
+A simple and beautiful theme inspired by the Ubuntu website and designed for
+Ubuntu community teams. Features responsive design and more.
+
 [Screenshot of the theme](screenshot.png?raw=true)
 
 Setting up
@@ -71,6 +74,6 @@ Class    | Effect
 -------- | -------------------
 strong   | Makes the text bold
 
-### Customizable colors and the header logo
+### Customizable colors and header logo
 If you don't want to use the Ubuntu orange in your site, or want to change the
 logo in the header, use the WordPress Customizer under the Appearance menu.
