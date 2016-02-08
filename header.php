@@ -13,7 +13,7 @@
 
 <body <?php body_class( ); ?>>
 
-	<div id="header" class="outside group"><div class="inside">
+	<div id="header" class="outside group src"><div class="inside">
 		<div id="header-logo">
 			<?php if( get_theme_mod( 'ubuntucommunity_header_logo' ) ) { ?>
 				<a href="<?php echo home_url( '/' ); ?>">
