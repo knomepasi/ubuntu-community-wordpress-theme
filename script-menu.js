@@ -36,6 +36,4 @@ function ubuntucommunity_menu_width( ) {
 
 	jQuery( 'head' ).append( '<link rel="stylesheet" class="menu-js" id="menu-js-small" href="' + ubuntucommunity.theme_url + '/style-resp-menu-small.css" type="text/css" media="only screen and (max-width:' + menu_full_min + 'px)" />' );
 	jQuery( 'head' ).append( '<link rel="stylesheet" class="menu-js" id="menu-js-tiny" href="' + ubuntucommunity.theme_url + '/style-resp-menu-tiny.css" type="text/css" media="only screen and (max-width:' + menu_small_min + 'px)" />' );
-
-	console.log( 'full: ' + menu_full_min + ', small: ' + menu_small_min );
 }
