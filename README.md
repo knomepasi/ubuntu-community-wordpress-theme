@@ -1,20 +1,20 @@
 Ubuntu community teams WordPress theme
 ======================================
 
-A simple and beautiful theme inspired by the Ubuntu website and designed for
-Ubuntu community teams. Features responsive design, support for RTL languages,
-customization of colors and more.
+A simple and beautiful theme inspired by the Ubuntu website and designed for Ubuntu community teams. Features responsive design, support for RTL languages, customization of colors and more.
 
 [Screenshot of the theme](screenshot.png?raw=true)
 
 Setting up
 ----------
 
-1. Copy all the files in the repository in a directory called "ubuntu-community"
-under the wp-content/themes/ directory.
-2. Enable the "Community theme for Ubuntu" theme from Appearance » Themes. If
-you are running multisite, you will need to network enable the theme first under
-Network Admin » Themes.
+1. Copy all the files in the repository in a directory called "ubuntu-community" under the wp-content/themes/ directory.
+2. Enable the "Community theme for Ubuntu" theme from Appearance » Themes. If you are running multisite, you will need to network enable the theme first under Network Admin » Themes.
+
+### Migrating
+
+If you are migrating your site from the [Ubuntu Loco Light theme](https://launchpad.net/ubuntu-community-webthemes/light-wordpress-theme)...
+- Set up the widget areas again; WordPress handles widget area settings per-theme
 
 
 After setting the theme up
@@ -22,17 +22,11 @@ After setting the theme up
 
 When the theme is set up, you might want to do the following things:
 
-### Create a menu and assign it to the "Header menu" theme location.
-**[Appearance » Menus]**  
-It's highly recommended to add the front page as the first item for this menu
-since there is no link to the main page visible by default.
+**Create a menu and assign it to the "Header menu" theme location.**  [Appearance » Menus]  
+It's highly recommended to add the front page as the first item for this menu since there is no link to the main page visible by default.
 
-### Select a static page for the front page.
-**[Settings » Reading]**  
-Note: When you set a static page as the front page, its title will be hidden
-by default. This is to ensure maximum flexibility to make the front page look
-as you like. If you want to use a regular title on the front page, simply add
-a "Heading 1" element to the beginning of the page.
+**Select a static page for the front page.**  [Settings » Reading]  
+Note: When you set a static page as the front page, its title will be hidden by default. This is to ensure maximum flexibility to make the front page look as you like. If you want to use a regular title on the front page, simply add a "Heading 1" element with your page name to the beginning of the page.
 
 
 Widget areas
@@ -63,18 +57,14 @@ To create columns in content, use the following markup:
   ///
   ... Column content ...
   [/cols]
-You can add up to four separators (///) within one [cols] declaration to create
-as many as five columns. If you wish to change the separator, edit the
-'ubuntucommunity_columns_separator' option.
+You can add up to four separators (///) within one [cols] declaration to create as many as five columns. If you wish to change the separator, edit the 'ubuntucommunity_columns_separator' option.
 
 ### Menu CSS classes
-In the menu editing page, show CSS Classes from the screen options. After that,
-you can use the following CSS classes to change the appearance of menu item:  
+In the menu editing page, show CSS Classes from the screen options. After that, you can use the following CSS classes to change the appearance of menu item:  
 
 Class    | Effect
 -------- | -------------------
 strong   | Makes the text bold
 
 ### Customizable colors and header logo
-If you don't want to use the Ubuntu orange in your site, or want to change the
-logo in the header, use the WordPress Customizer under the Appearance menu.
+If you don't want to use the Ubuntu orange in your site, or want to change the logo in the header, use the WordPress Customizer under the Appearance menu.
