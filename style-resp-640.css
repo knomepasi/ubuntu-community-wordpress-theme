@@ -1,106 +1,11 @@
+@import 'style-resp-menu-tiny.css';
+
 #notifications,
 #main,
 .outside {
 	width: auto;
 	min-width: 320px !important;
 }
-
-/* Header */
-
-/* TODO
- * Move this into another CSS file, and load it with JS when the menu +
- * logo would not fit in the viewport 
- */
-
-#header .inside {
-	height: auto;
-}
-	#header-logo,
-	#header-menu {
-		float: none;
-	}
-		#header-logo {
-			padding: 0;
-			height: auto;
-		}
-			#header-logo img {
-				max-width: 80%;
-			}
-			#header-logo a {
-				display: block;
-				padding: 0.4em 1.75em;
-			}
-				#header-logo a:after {
-					content: "›";
-					float: right;
-					transform: rotate( 90deg );
-					transition: all 200ms;
-
-					margin-top: 0.15em;
-					font-size: 300%;
-					color: #fff;
-				}
-				#header.menu-open #header-logo a:after {
-					transform: rotate( 270deg );
-				}
-
-		#header-menu {
-			border-top: 1px solid rgba( 0, 0, 0, 0.15 );
-			padding-left: 0;
-
-			display: none;
-		}
-			#header.menu-open #header-menu {
-				display: block;
-			}
-			#header-menu li,
-			#header-menu ul.children,
-			#header-menu ul.sub-menu {
-				position: static !important;
-				float: none !important;
-			}
-			#header-menu li.current-menu-item a,
-			#header-menu li.currrent-page-ancestor a {
-				background-color: transparent;
-			}
-
-			#header-menu .menu > ul,
-			#header-menu ul.menu {
-				border: none;
-				height: auto;
-			}
-			#header-menu li {
-				border-left: none !important;
-				border-right: none !important;
-				border-top: 1px solid rgba( 255, 255, 255, 0.15 );
-				border-bottom: 1px solid rgba( 0, 0, 0, 0.15 );
-
-				background-color: rgba( 255, 255, 255, 0.2 );
-			}
-			#header-menu li a {
-				padding: 0.2em 1.75em !important;
-				border: none !important;
-				border-radius: 0 !important;
-			}
-			#header-menu ul.children,
-			#header-menu ul.sub-menu {
-				position: static;
-				display: block;
-				width: 100% !important;
-			}
-				#header-menu li.menu-item-has-children:hover:after {
-					display: none;
-					height: 0;
-					width: 0;
-				}
-				#header-menu ul.children li:first-child,
-				#header-menu ul.sub-menu li:first-child {
-					padding-top: 0;
-				}
-				#header-menu ul.children li a,
-				#header-menu ul.sub-menu li a {
-					border-top: 1px solid rgba( 0, 0, 0, 0.1 ) !important;
-				}
 
 /* Content */
 

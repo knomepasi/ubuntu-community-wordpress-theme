@@ -1,0 +1,6 @@
+#header-menu .menu > ul li a,
+#header-menu ul.menu li a {
+	font-size: 90%;
+	padding-left: 0.5em;
+	padding-right: 0.5em;
+}

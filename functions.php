@@ -85,6 +85,7 @@ function ubuntucommunity_scripts( ) {
 
 	// JS
 	wp_enqueue_script( 'ubuntucommunity-js-menu', get_stylesheet_directory_uri( ) . '/script-menu.js', array( 'jquery' ) );
+	wp_localize_script( 'ubuntucommunity-js-menu', 'ubuntucommunity', array( 'theme_url' => get_stylesheet_directory_uri( ) ) );
 }
 
 /*

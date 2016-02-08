@@ -54,7 +54,7 @@ body {
 /*  Logo  */
 #header-logo {
 	float: right;
-	padding: 6px 0;
+	padding: 6px 0 6px 1em;
 	height: 28px;
 }
 	#header-logo img {
