@@ -13,7 +13,7 @@
 	<div id="main" class="inside"><div class="pad">
 		<?php
 			if( have_posts( ) ) {
-				if( is_archive( ) || is_search( ) ) {
+				if( is_archive( ) || is_search( ) || strlen( $_GET['s'] ) > 0 ) {
 					get_template_part( 'content', 'archive' );
 				} else {
 					get_template_part( 'content' );

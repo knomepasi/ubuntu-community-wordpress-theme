@@ -13,7 +13,7 @@
 				?><h1 class="post-title"><?php _e( 'Archive', 'ubuntu-community' ); ?></h1><?php
 			}
 		}
-		if( is_search( ) ) {
+		if( is_search( ) || strlen( $_GET['s'] ) > 0 ) {
 			?><h1 class="post-title"><?php printf( __( 'Search results for "%s"', 'ubuntu-community' ), $_GET['s'] ); ?></h1><?php
 		}
 	?>
