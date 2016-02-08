@@ -52,11 +52,13 @@ Additional features
 
 ### Autocolumns for content
 To create columns in content, use the following markup:
-  [cols]
-  ... Column content ...
-  ///
-  ... Column content ...
-  [/cols]
+```
+[cols]
+... Column content ...
+///
+... Column content ...
+[/cols]
+```
 You can add up to four separators (///) within one [cols] declaration to create as many as five columns. If you wish to change the separator, edit the 'ubuntucommunity_columns_separator' option.
 
 ### Menu CSS classes
