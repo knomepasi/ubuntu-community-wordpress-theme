@@ -13,8 +13,13 @@ Setting up
 
 ### Migrating
 
-If you are migrating your site from the [Ubuntu Loco Light theme](https://launchpad.net/ubuntu-community-webthemes/light-wordpress-theme)...
+If you are migrating a site that already has content:
 - Set up the widget areas again; WordPress handles widget area settings per-theme
+
+If you are migrating your site from the [Ubuntu Loco Light theme](https://launchpad.net/ubuntu-community-webthemes/light-wordpress-theme) (later "light theme"):
+- **Navigation menu**
+  - Light theme: Created by adding two menu widgets in the "Menu" and "Submenu" widget areas
+  - This theme: Created by linking a menu with the "Header menu" location (supports subitems directly)
 
 
 After setting the theme up
