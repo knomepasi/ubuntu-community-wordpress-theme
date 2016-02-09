@@ -1,5 +1,5 @@
-#header.src #header-menu .menu > ul li a,
-#header.src #header-menu ul.menu li a {
+#header-menu .menu > ul li a,
+#header-menu ul.menu li a {
 	font-size: 90%;
 	padding-left: 0.5em;
 	padding-right: 0.5em;

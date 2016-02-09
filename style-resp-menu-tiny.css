@@ -1,23 +1,23 @@
-#header.src .inside {
+.inside {
 	height: auto;
-	padding: 0;
+	padding: 0 !important;
 }
-	#header.src #header-logo,
-	#header.src #header-menu {
+	#header-logo,
+	#header-menu {
 		float: none;
+		padding: 0;
 	}
-		#header.src #header-logo {
-			padding: 0;
+		#header-logo {
 			height: auto;
 		}
-			#header.src #header-logo img {
+			#header-logo img {
 				max-width: 80%;
 			}
-			#header.src #header-logo a {
+			#header-logo a {
 				display: block;
 				padding: 0.4em 1.75em;
 			}
-				#header.src #header-logo a:after {
+				#header-logo a:after {
 					content: "›";
 					float: right;
 					transform: rotate( 90deg );
@@ -27,36 +27,35 @@
 					font-size: 300%;
 					color: #fff;
 				}
-				#header.src.menu-open #header-logo a:after {
+				#header.menu-open #header-logo a:after {
 					transform: rotate( 270deg );
 				}
 
-		#header.src #header-menu {
+		#header-menu {
 			border-top: 1px solid rgba( 0, 0, 0, 0.15 );
-			padding-left: 0;
 
 			display: none;
 		}
 			#header.src.menu-open #header-menu {
 				display: block;
 			}
-			#header.src #header-menu li,
-			#header.src #header-menu ul.children,
-			#header.src #header-menu ul.sub-menu {
+			#header-menu li,
+			#header-menu ul.children,
+			#header-menu ul.sub-menu {
 				position: static !important;
 				float: none !important;
 			}
-			#header.src #header-menu li.current-menu-item a,
-			#header.src #header-menu li.currrent-page-ancestor a {
+			#header-menu li.current-menu-item a,
+			#header-menu li.currrent-page-ancestor a {
 				background-color: transparent;
 			}
 
-			#header.src #header-menu .menu > ul,
-			#header.src #header-menu ul.menu {
+			#header-menu .menu > ul,
+			#header-menu ul.menu {
 				border: none;
 				height: auto;
 			}
-			#header.src #header-menu li {
+			#header-menu li {
 				border-left: none !important;
 				border-right: none !important;
 				border-top: 1px solid rgba( 255, 255, 255, 0.15 );
@@ -64,27 +63,27 @@
 
 				background-color: rgba( 255, 255, 255, 0.2 );
 			}
-			#header.src #header-menu li a {
+			#header-menu li a {
 				padding: 0.2em 1.75em !important;
 				border: none !important;
 				border-radius: 0 !important;
 			}
-			#header.src #header-menu ul.children,
-			#header.src #header-menu ul.sub-menu {
+			#header-menu ul.children,
+			#header-menu ul.sub-menu {
 				position: static;
 				display: block;
 				width: 100% !important;
 			}
-				#header.src #header-menu li.menu-item-has-children:hover:after {
+				#header-menu li.menu-item-has-children:hover:after {
 					display: none;
 					height: 0;
 					width: 0;
 				}
-				#header.src #header-menu ul.children li:first-child,
-				#header.src #header-menu ul.sub-menu li:first-child {
+				#header-menu ul.children li:first-child,
+				#header-menu ul.sub-menu li:first-child {
 					padding-top: 0;
 				}
-				#header.src #header-menu ul.children li a,
-				#header.src #header-menu ul.sub-menu li a {
+				#header-menu ul.children li a,
+				#header-menu ul.sub-menu li a {
 					border-top: 1px solid rgba( 0, 0, 0, 0.1 ) !important;
 				}

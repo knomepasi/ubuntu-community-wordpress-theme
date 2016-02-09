@@ -54,7 +54,7 @@ body {
 /*  Logo  */
 #header-logo {
 	float: right;
-	padding: 6px 0 6px 0.5em;
+	padding: 6px 0 6px 1em;
 	height: 28px;
 }
 	#header-logo img {
@@ -64,54 +64,54 @@ body {
 
 /*  Navigation  */
 
-#header.src #header-menu {
+#header-menu {
 	float: left;
 }
-	#header.src #header-menu .menu > ul,
-	#header.src #header-menu ul.menu {
+	#header-menu .menu > ul,
+	#header-menu ul.menu {
 		position: relative;
 		top: 0;
 		margin: 0;
 
 		height: 40px;
 	}
-		#header.src #header-menu li {
+		#header-menu li {
 			position: relative;
 		}
-			#header.src #header-menu .menu > ul > li:hover,
-			#header.src #header-menu ul.menu > li:hover,
-			#header.src #header-menu li.current-menu-item a,
-			#header.src #header-menu li.currrent-page-ancestor a {
+			#header-menu .menu > ul > li:hover,
+			#header-menu ul.menu > li:hover,
+			#header-menu li.current-menu-item a,
+			#header-menu li.currrent-page-ancestor a {
 				background-color: rgba( 0, 0, 0, 0.1 );
 			}
 
-#header.src #header-menu .menu > ul,
-#header.src #header-menu ul.menu {
+#header-menu .menu > ul,
+#header-menu ul.menu {
 	border-left: 1px solid rgba( 0, 0, 0, 0.15 );
 	border-right: 1px solid rgba( 255, 255, 255, 0.15 );
 }
-	#header.src #header-menu .menu > ul li,
-	#header.src #header-menu ul.menu li {
+	#header-menu .menu > ul li,
+	#header-menu ul.menu li {
 		float: left;
 		line-height: 1.8em;
 	
 		border-right: 1px solid rgba( 0, 0, 0, 0.15 );
 		border-left: 1px solid rgba( 255, 255, 255, 0.15 );
 	}
-		#header.src #header-menu .menu > ul li a,
-		#header.src #header-menu ul.menu li a {
+		#header-menu .menu > ul li a,
+		#header-menu ul.menu li a {
 			display: block;
 			padding: 7px 1em;
 			height: 26px;
 			color: #fff;
 		}
-			#header.src #header-menu .menu > ul li.strong a,
-			#header.src #header-menu ul.menu li.strong a {
+			#header-menu .menu > ul li.strong a,
+			#header-menu ul.menu li.strong a {
 				font-weight: 500 !important;
 			}
 
-#header.src #header-menu ul.children,
-#header.src #header-menu ul.sub-menu {
+#header-menu ul.children,
+#header-menu ul.sub-menu {
 	background-color: transparent !important;
 	display: none;
 	width: 250px !important;
@@ -123,22 +123,22 @@ body {
 	left: -2px;
 	float: left;
 }
-	#header.src #header-menu li:hover > ul.children,
-	#header.src #header-menu li:hover > ul.sub-menu {
+	#header-menu li:hover > ul.children,
+	#header-menu li:hover > ul.sub-menu {
 		display: block;
 	}
 
-	#header.src #header-menu ul.children li,
-	#header.src #header-menu ul.sub-menu li {
+	#header-menu ul.children li,
+	#header-menu ul.sub-menu li {
 		width: 100%;
 		height: auto;
 	}
-		#header.src #header-menu ul.children > li,
-		#header.src #header-menu ul.sub-menu > li {
+		#header-menu ul.children > li,
+		#header-menu ul.sub-menu > li {
 			border: none;
 		}
 
-		#header.src #header-menu li.menu-item-has-children:hover:after {
+		#header-menu li.menu-item-has-children:hover:after {
 			content: "";
 			background: #fafafa linear-gradient( to left bottom, rgba( 0, 0, 0, 0 ), rgba( 0, 0, 0, 0 ) 15%, rgba( 0, 0, 0, 0.2 ) 45% );
 			position: absolute;
@@ -151,13 +151,13 @@ body {
 			border: 1px solid #aaa;
 		}
 
-		#header.src #header-menu ul.children li:first-child,
-		#header.src #header-menu ul.sub-menu li:first-child {
+		#header-menu ul.children li:first-child,
+		#header-menu ul.sub-menu li:first-child {
 			padding-top: 10px;
 		}
 
-		#header.src #header-menu ul.children li a, 
-		#header.src #header-menu ul.sub-menu li a {
+		#header-menu ul.children li a, 
+		#header-menu ul.sub-menu li a {
 			background-color: #fafafa;
 			color: #555;
 			font-size: 90%;
@@ -165,19 +165,19 @@ body {
 			border-right: 1px solid #aaa;
 			padding: 2px 1em;
 		}
-			#header.src #header-menu ul.children li a:hover,
-			#header.src #header-menu ul.sub-menu li a:hover {
+			#header-menu ul.children li a:hover,
+			#header-menu ul.sub-menu li a:hover {
 				color: #dd4814;
 			}
-			#header.src #header-menu ul.children li:first-child a,
-			#header.src #header-menu ul.sub-menu li:first-child a {
+			#header-menu ul.children li:first-child a,
+			#header-menu ul.sub-menu li:first-child a {
 				padding-top: 7px;
 				border-top: 1px solid #aaa;
 				border-top-left-radius: 6px;
 				border-top-right-radius: 6px;
 			}
-			#header.src #header-menu ul.children li:last-child a,
-			#header.src #header-menu ul.sub-menu li:last-child a {
+			#header-menu ul.children li:last-child a,
+			#header-menu ul.sub-menu li:last-child a {
 				padding-bottom: 7px;
 				border-bottom: 1px solid #aaa;
 				border-bottom-left-radius: 6px;

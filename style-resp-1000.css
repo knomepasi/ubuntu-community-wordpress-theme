@@ -23,10 +23,10 @@
 	border-radius: 0;
 }
 
-#header.src {
-	margin: 0;
+#header {
+	margin-bottom: 0;
 }
-	#header.src .inside {
+	#header .inside {
 		padding: 0 0.5em;
 	}
 

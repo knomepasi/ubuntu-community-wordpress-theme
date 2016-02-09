@@ -18,8 +18,8 @@ function ubuntucommunity_textdomain( ) {
 
 if( function_exists( 'register_sidebar' ) ) {
 	register_sidebar( array(
-		'name' => __( 'Footnote widgets', 'ubuntu-community' ),
-		'id' => 'widgets_footnote',
+		'name' => __( 'Sidebar (right)', 'ubuntu-community' ),
+		'id' => 'widgets_sidebar_right',
 		'before_widget' => '<div class="widget">',
 		'after_widget' => '</div>',
 		'before_title' => '<h2>',
@@ -28,6 +28,14 @@ if( function_exists( 'register_sidebar' ) ) {
 	register_sidebar( array(
 		'name' => __( 'Notifications', 'ubuntu-community' ),
 		'id' => 'widgets_notifications',
+		'before_widget' => '<div class="widget">',
+		'after_widget' => '</div>',
+		'before_title' => '<h2>',
+		'after_title' => '</h2>'
+	) );
+	register_sidebar( array(
+		'name' => __( 'Footnote widgets', 'ubuntu-community' ),
+		'id' => 'widgets_footnote',
 		'before_widget' => '<div class="widget">',
 		'after_widget' => '</div>',
 		'before_title' => '<h2>',
@@ -84,7 +92,7 @@ function ubuntucommunity_scripts( ) {
 	wp_enqueue_style( 'ubuntucommunity-style-resp-640', get_stylesheet_directory_uri( ) . '/style-resp-640.css', array( 'ubuntucommunity-style', 'ubuntucommunity-style-resp-800' ), null, 'only screen and (max-width:640px)' );
 
 	// JS
-	wp_enqueue_script( 'ubuntucommunity-js-menu', get_stylesheet_directory_uri( ) . '/script-menu.js', array( 'jquery' ) );
+	wp_enqueue_script( 'ubuntucommunity-js-menu', get_stylesheet_directory_uri( ) . '/script-menu.js', array( 'jquery' ), '1' );
 	wp_localize_script( 'ubuntucommunity-js-menu', 'ubuntucommunity', array( 'theme_url' => get_stylesheet_directory_uri( ) ) );
 }
 
