@@ -159,7 +159,7 @@ function ubuntucommunity_customize_register( $wp_customize ) {
 
 	$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'ubuntucommunity_header_logo', array(
 		'label'       => __( 'Header logo', 'ubuntu-community' ),
-		'description' => __( 'The logo to show in the right side of the header. If an image is not set, a Ubuntu logo is used.', 'ubuntu-community' ),
+		'description' => __( 'The logo to show in the right side of the header. The image is resized to a maximum height of 25 pixels. If an image is not set, the Ubuntu logo is used.', 'ubuntu-community' ),
 		'section'     => 'title_tagline',
 		'height'      => '25'
 	) ) );
