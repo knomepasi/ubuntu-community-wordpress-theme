@@ -72,43 +72,43 @@ body {
 		position: relative;
 		top: 0;
 		margin: 0;
-
 		height: 40px;
+
+		border-left: 1px solid rgba( 0, 0, 0, 0.15 );
+		border-right: 1px solid rgba( 255, 255, 255, 0.15 );
+
+		background-color: #dd4814;
 	}
 		#header-menu li {
 			position: relative;
 		}
-			#header-menu .menu > ul > li:hover,
-			#header-menu ul.menu > li:hover,
-			#header-menu li.current-menu-item a,
-			#header-menu li.currrent-page-ancestor a {
-				background-color: rgba( 0, 0, 0, 0.1 );
-			}
 
-#header-menu .menu > ul,
-#header-menu ul.menu {
-	border-left: 1px solid rgba( 0, 0, 0, 0.15 );
-	border-right: 1px solid rgba( 255, 255, 255, 0.15 );
-}
-	#header-menu .menu > ul li,
-	#header-menu ul.menu li {
-		float: left;
-		line-height: 1.8em;
+		#header-menu .menu > ul li,
+		#header-menu ul.menu li {
+			float: left;
+			line-height: 1.8em;
 	
-		border-right: 1px solid rgba( 0, 0, 0, 0.15 );
-		border-left: 1px solid rgba( 255, 255, 255, 0.15 );
-	}
-		#header-menu .menu > ul li a,
-		#header-menu ul.menu li a {
-			display: block;
-			padding: 7px 1em;
-			height: 26px;
-			color: #fff;
+			border-right: 1px solid rgba( 0, 0, 0, 0.15 );
+			border-left: 1px solid rgba( 255, 255, 255, 0.15 );
 		}
-			#header-menu .menu > ul li.strong a,
-			#header-menu ul.menu li.strong a {
-				font-weight: 500 !important;
+			#header-menu .menu > ul li a,
+			#header-menu ul.menu li a {
+				display: block;
+				padding: 7px 1em;
+				height: 26px;
+				color: #fff;
 			}
+				#header-menu .menu > ul > li:hover a,
+				#header-menu ul.menu > li:hover a,
+				#header-menu li.current-menu-item a,
+				#header-menu li.currrent-page-ancestor a {
+					background-color: rgba( 0, 0, 0, 0.1 );
+				}
+
+				#header-menu .menu > ul li.strong a,
+				#header-menu ul.menu li.strong a {
+					font-weight: 500 !important;
+				}
 
 #header-menu ul.children,
 #header-menu ul.sub-menu {
@@ -158,7 +158,7 @@ body {
 
 		#header-menu ul.children li a, 
 		#header-menu ul.sub-menu li a {
-			background-color: #fafafa;
+			background-color: #fafafa !important;
 			color: #555;
 			font-size: 90%;
 			border-left: 1px solid #aaa;

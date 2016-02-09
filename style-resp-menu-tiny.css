@@ -32,10 +32,9 @@
 				}
 
 		#header-menu {
-			border-top: 1px solid rgba( 0, 0, 0, 0.15 );
-
 			display: none;
 		}
+			#header-menu.nojs,
 			#header.menu-open #header-menu {
 				display: block;
 			}
@@ -60,14 +59,12 @@
 				border-right: none !important;
 				border-top: 1px solid rgba( 255, 255, 255, 0.15 );
 				border-bottom: 1px solid rgba( 0, 0, 0, 0.15 );
-
-				background-color: rgba( 255, 255, 255, 0.2 );
 			}
-			#header-menu li a {
-				padding: 0.2em 1.75em !important;
-				border: none !important;
-				border-radius: 0 !important;
-			}
+				#header-menu li a {
+					padding: 0.2em 1.75em !important;
+					border: none !important;
+					border-radius: 0 !important;
+				}
 			#header-menu ul.children,
 			#header-menu ul.sub-menu {
 				position: static;

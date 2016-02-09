@@ -7,12 +7,11 @@ body {
 }
 	#header-menu ul.children li a, 
 	#header-menu ul.sub-menu li a {
-		background-color: #444;
+		background-color: #444 !important;
 		color: #ddd;
 		border-color: #777 !important;
 	}
 
-		/* TODO: Fallback menu */
 		#header-menu li.menu-item-has-children:hover:after {
 			background-color: #444;
 			border-color: #777;

@@ -20,19 +20,17 @@
 ?>
 <body <?php body_class( $class ); ?>>
 
-	<div id="header" class="outside group"><div class="inside">
+	<div id="header" class="outside"><div class="inside">
 		<div id="header-logo">
-			<?php if( get_theme_mod( 'ubuntucommunity_header_logo' ) ) { ?>
-				<a href="<?php echo home_url( '/' ); ?>">
+			<a href="<?php echo home_url( '/' ); ?>">
+				<?php if( get_theme_mod( 'ubuntucommunity_header_logo' ) ) { ?>
 					<img src="<?php echo get_theme_mod( 'ubuntucommunity_header_logo' ); ?>" alt="<?php bloginfo( 'name' ); ?>" />
-				</a>
-			<?php } else { ?>
-				<a href="//ubuntu.com/">
+				<?php } else { ?>
 					<img src="<?php echo get_stylesheet_directory_uri( ); ?>/images/ubuntu-logo.png" alt="Ubuntu">
-				</a>
-			<?php } ?>
+				<?php } ?>
+			</a>
 		</div>
-		<div id="header-menu" class="group">
+		<div id="header-menu" class="nojs">
 			<?php wp_nav_menu( array( 'theme_location' => 'header-menu' ) ); ?>
 		</div>
 	</div></div>

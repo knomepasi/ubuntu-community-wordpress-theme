@@ -1,4 +1,7 @@
 jQuery( function( ) {
+	jQuery( '.nojs' ).removeClass( 'nojs' );
+
+	// TODO: Remove the event when not using the small menu
 	jQuery( '#header-logo a' ).click( function( e ) {
 		jQuery( '#header' ).toggleClass( 'menu-open' );
 		e.preventDefault( );
@@ -9,7 +12,9 @@ jQuery( function( ) {
 
 function ubuntucommunity_menu_width( ) {
 	// Remove the responsive CSS for a while to simulate a large screen
-	css = jQuery( 'head link[media^="only screen"]' ).detach( );
+	css = jQuery( 'head link[media^="only screen"]' );
+	prev = css.first( ).prev( ); 
+	css.detach( );
 
 	// Check menu and logo widths
 	menu_width = jQuery( '#header-menu' ).outerWidth( true );
@@ -21,7 +26,7 @@ function ubuntucommunity_menu_width( ) {
 	jQuery( '#menu-js' ).remove( );
 
 	// Put the CSS files back
-	css.appendTo( 'head' );
+	css.insertAfter( prev );
 
 	var padding = determine_em_width( ) * 2;
 	var menu_full_min = menu_width + logo_width + padding;
