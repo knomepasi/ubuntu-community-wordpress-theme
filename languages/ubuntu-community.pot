@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-01-29 14:45+0200\n"
+"POT-Creation-Date: 2016-02-09 19:22+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -76,7 +76,7 @@ msgid "%1$s comments"
 msgstr ""
 
 #: functions.php:21
-msgid "Footnote widgets"
+msgid "Sidebar (right)"
 msgstr ""
 
 #: functions.php:29
@@ -84,59 +84,75 @@ msgid "Notifications"
 msgstr ""
 
 #: functions.php:37
+msgid "Footnote widgets"
+msgstr ""
+
+#: functions.php:45
 msgid "Footer widgets"
 msgstr ""
 
-#: functions.php:53
+#: functions.php:61
 msgid "Header Menu"
 msgstr ""
 
-#: functions.php:146
-msgid "Header Background Color"
-msgstr ""
-
-#: functions.php:157
-msgid "Navigation Link Color"
-msgstr ""
-
-#: functions.php:158
-msgid "The color for hovered menu items in the header dropdown menu."
-msgstr ""
-
-#: functions.php:169
-msgid "Link Color"
-msgstr ""
-
-#: functions.php:170
-msgid "The color for links in the main content area."
-msgstr ""
-
-#: functions.php:181
-msgid "Footer Link Color"
-msgstr ""
-
-#: functions.php:182
-msgid "The color for links in the footer."
-msgstr ""
-
-#: functions.php:192
+#: functions.php:161
 msgid "Header logo"
 msgstr ""
 
-#: functions.php:193
+#: functions.php:162
 msgid ""
 "The logo to show in the right side of the header. If an image is not set, a "
 "Ubuntu logo is used."
 msgstr ""
 
-#: functions.php:204
+#: functions.php:177
+msgid "Header Background Color"
+msgstr ""
+
+#: functions.php:188
+msgid "Navigation Link Color"
+msgstr ""
+
+#: functions.php:189
+msgid "The color for hovered menu items in the header dropdown menu."
+msgstr ""
+
+#: functions.php:200
+msgid "Link Color"
+msgstr ""
+
+#: functions.php:201
+msgid "The color for links in the main content area."
+msgstr ""
+
+#: functions.php:212
+msgid "Sidebar Link Color"
+msgstr ""
+
+#: functions.php:213
+msgid "The color for links in the sidebar in the main content area."
+msgstr ""
+
+#: functions.php:224
+msgid "Footer Link Color"
+msgstr ""
+
+#: functions.php:225
+msgid "The color for links in the footer."
+msgstr ""
+
+#: functions.php:236
+msgid "Use the dark background variant?"
+msgstr ""
+
+#: functions.php:254
 msgid "Show authors for posts?"
 msgstr ""
 
-#: index.php:23
+#: index.php:24
 msgid "Page not found."
 msgstr ""
 
-#: index.php:24
+#: index.php:25
 msgid "The page you were looking for was not found."
 msgstr ""

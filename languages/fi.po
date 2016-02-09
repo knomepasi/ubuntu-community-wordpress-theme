@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-01-29 14:46+0200\n"
-"PO-Revision-Date: 2016-01-29 14:47+0200\n"
+"POT-Creation-Date: 2016-02-09 19:23+0200\n"
+"PO-Revision-Date: 2016-02-09 19:24+0200\n"
 "Last-Translator: Pasi Lallinaho <pasi@shimmerproject.org>\n"
 "Language-Team: \n"
 "Language: fi\n"
@@ -77,54 +77,30 @@ msgid "%1$s comments"
 msgstr "%1$s kommenttia"
 
 #: functions.php:21
-msgid "Footnote widgets"
-msgstr "Alaviitteen vimpaimet"
+msgid "Sidebar (right)"
+msgstr "Sivupalkki (oikea)"
 
 #: functions.php:29
 msgid "Notifications"
 msgstr "Ilmoitukset"
 
 #: functions.php:37
+msgid "Footnote widgets"
+msgstr "Alaviitteen vimpaimet"
+
+#: functions.php:45
 msgid "Footer widgets"
 msgstr "Alatunnisteen vimpaimet"
 
-#: functions.php:53
+#: functions.php:61
 msgid "Header Menu"
 msgstr "Ylätunnisteen valikko"
 
-#: functions.php:146
-msgid "Header Background Color"
-msgstr "Ylätunnisteen taustaväri"
-
-#: functions.php:157
-msgid "Navigation Link Color"
-msgstr "Navigointilinkkien väri"
-
-#: functions.php:158
-msgid "The color for hovered menu items in the header dropdown menu."
-msgstr "Yläpalkin pudotusvalikon linkkien väri aktivoituna."
-
-#: functions.php:169
-msgid "Link Color"
-msgstr "Linkkien väri"
-
-#: functions.php:170
-msgid "The color for links in the main content area."
-msgstr "Ensisijaisen sisältöalueen linkkien väri."
-
-#: functions.php:181
-msgid "Footer Link Color"
-msgstr "Alatunnisteen linkkien väri"
-
-#: functions.php:182
-msgid "The color for links in the footer."
-msgstr "Linkkien väri alatunnisteessa."
-
-#: functions.php:192
+#: functions.php:161
 msgid "Header logo"
 msgstr "Ylätunnisteen logo"
 
-#: functions.php:193
+#: functions.php:162
 msgid ""
 "The logo to show in the right side of the header. If an image is not set, a "
 "Ubuntu logo is used."
@@ -132,14 +108,54 @@ msgstr ""
 "Logo, joka näytetään ylätunnisteen oikeassa reunassa. Jos kuvaa ei ole "
 "määritelty, käytetään Ubuntun logoa."
 
-#: functions.php:204
+#: functions.php:177
+msgid "Header Background Color"
+msgstr "Ylätunnisteen taustaväri"
+
+#: functions.php:188
+msgid "Navigation Link Color"
+msgstr "Navigointilinkkien väri"
+
+#: functions.php:189
+msgid "The color for hovered menu items in the header dropdown menu."
+msgstr "Yläpalkin pudotusvalikon linkkien väri aktivoituna."
+
+#: functions.php:200
+msgid "Link Color"
+msgstr "Linkkien väri"
+
+#: functions.php:201
+msgid "The color for links in the main content area."
+msgstr "Ensisijaisen sisältöalueen linkkien väri."
+
+#: functions.php:212
+msgid "Sidebar Link Color"
+msgstr "Sivupalkin linkkien väri"
+
+#: functions.php:213
+msgid "The color for links in the sidebar in the main content area."
+msgstr "Linkkien väri ensisijaisen sisältöalueen sivupalkissa."
+
+#: functions.php:224
+msgid "Footer Link Color"
+msgstr "Alatunnisteen linkkien väri"
+
+#: functions.php:225
+msgid "The color for links in the footer."
+msgstr "Linkkien väri alatunnisteessa."
+
+#: functions.php:236
+msgid "Use the dark background variant?"
+msgstr "Käytä tummaa taustaväriä?"
+
+#: functions.php:254
 msgid "Show authors for posts?"
 msgstr "Näytä kirjoittajan tiedot artikkeleiden yhteydessä?"
 
-#: index.php:23
+#: index.php:24
 msgid "Page not found."
 msgstr "Sivua ei löytynyt."
 
-#: index.php:24
+#: index.php:25
 msgid "The page you were looking for was not found."
 msgstr "Sivua, jota etsit, ei löytynyt."
