@@ -244,8 +244,8 @@ add_action( 'wp_head', 'ubuntucommunity_customizer_css' );
 
 function ubuntucommunity_customizer_css( ) {
 	$mods = array(
-		'ubuntucommunity_header_bg_color' => '#header.src { background-color: %s; }',
-		'ubuntucommunity_header_link_color' => '#header.src #header-menu ul.children li a:hover, #header.src #header-menu ul.sub-menu li a:hover { color: %s; }',
+		'ubuntucommunity_header_bg_color' => '#header { background-color: %s; }',
+		'ubuntucommunity_header_link_color' => '#header-menu ul.children li a:hover, #header-menu ul.sub-menu li a:hover { color: %s; }',
 		'ubuntucommunity_link_color' => '#main a, a:link, #main a:active, #main a:hover, #main a:active, #main a:focus { color: %s; }',
 		'ubuntucommunity_footer_link_color' => '#footnote a:hover, #footnote a:active, #footnote a:focus, #footer a:hover, #footer a:active, #footer a:focus { color: %s; }'
 	);

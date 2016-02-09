@@ -317,6 +317,31 @@ body {
 				margin-left: 2em !important;
 			}
 
+/*  Main with sidebar  */
+
+body.has-sidebar #main #content {
+	float: left;
+	width: 72%;
+}
+
+body.has-sidebar #main #sidebar {
+	float: right;
+	width: 28%;
+	padding-left: 3em;
+	box-sizing: border-box;
+}
+	body.has-sidebar #main #sidebar .widget {
+		padding: 1.2em;
+		margin-bottom: 1em;
+		background-color: rgba( 0, 0, 0, 0.03 );
+	}
+	body.has-sidebar #main #sidebar .widget :first-child {
+		margin-top: 0;
+	}
+	body.has-sidebar #main #sidebar .widget :last-child {
+		margin-bottom: 0;
+	}
+
 /*  Comments  */
 #comments {
 	font-size: 105%;
