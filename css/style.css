@@ -1,0 +1,580 @@
+/*
+ *  Theme Name: Community theme for Ubuntu
+ *  Description: A simple and beautiful theme inspired by the Ubuntu website. For use of various Ubuntu team who want a somewhat unified look. 
+ *  Author: Pasi Lallinaho
+ *  Author URI: http://open.knome.fi/
+ *  Version: 2016-february
+ *
+ */
+
+body {
+	background-color: #f7f7f7;
+	color: #333;
+
+	font-size: small;
+	font-family: 'Ubuntu', 'Bitstream Vera Sans', 'DejaVu Sans', Tahoma, sans-serif;
+	font-weight: 400;
+	line-height: 1.4em;
+}
+
+.outside {
+	width: 100%;
+}
+
+.inside {
+	width: 90%;
+	min-width: 960px;
+	max-width: 1600px;
+
+	margin: 0 auto;
+}
+
+
+/*  Header
+ *
+ */
+
+#header {
+	background-color: #dd4814;
+	border-bottom: 1px solid #ccc;
+
+	margin-bottom: 2em;
+}
+	#header .inside {
+		height: 40px;
+		font-size: 110%;
+	}
+
+	#header a:hover,
+	#header a:active,
+	#header a:focus {
+		text-decoration: none;
+	}
+
+/*  Logo  */
+#header-logo {
+	float: right;
+	padding: 6px 0 6px 1em;
+	height: 28px;
+}
+	#header-logo img {
+		max-height: 25px;
+		width: auto;
+	}
+
+/*  Navigation  */
+
+#header-menu {
+	float: left;
+}
+	#header-menu .menu > ul,
+	#header-menu ul.menu {
+		position: relative;
+		top: 0;
+		margin: 0;
+		height: 40px;
+
+		border-left: 1px solid rgba( 0, 0, 0, 0.15 );
+		border-right: 1px solid rgba( 255, 255, 255, 0.15 );
+
+		background-color: #dd4814;
+	}
+		#header-menu li {
+			position: relative;
+		}
+
+		#header-menu .menu > ul li,
+		#header-menu ul.menu li {
+			float: left;
+			line-height: 1.8em;
+	
+			border-right: 1px solid rgba( 0, 0, 0, 0.15 );
+			border-left: 1px solid rgba( 255, 255, 255, 0.15 );
+		}
+			#header-menu .menu > ul li a,
+			#header-menu ul.menu li a {
+				display: block;
+				padding: 7px 1em;
+				height: 26px;
+				color: #fff;
+			}
+				#header-menu .menu > ul > li:hover a,
+				#header-menu ul.menu > li:hover a,
+				#header-menu li.current-menu-item a,
+				#header-menu li.currrent-page-ancestor a {
+					background-color: rgba( 0, 0, 0, 0.1 );
+				}
+
+				#header-menu .menu > ul li.strong a,
+				#header-menu ul.menu li.strong a {
+					font-weight: 500 !important;
+				}
+
+#header-menu ul.children,
+#header-menu ul.sub-menu {
+	background-color: transparent !important;
+	display: none;
+	width: 250px !important;
+	height: auto;
+
+	position: absolute;
+	z-index: 500;
+	top: 36px;
+	left: -2px;
+	float: left;
+}
+	#header-menu li:hover > ul.children,
+	#header-menu li:hover > ul.sub-menu {
+		display: block;
+	}
+
+	#header-menu ul.children li,
+	#header-menu ul.sub-menu li {
+		width: 100%;
+		height: auto;
+	}
+		#header-menu ul.children > li,
+		#header-menu ul.sub-menu > li {
+			border: none;
+		}
+
+		#header-menu li.menu-item-has-children:hover:after {
+			content: "";
+			background: #fafafa linear-gradient( to left bottom, rgba( 0, 0, 0, 0 ), rgba( 0, 0, 0, 0 ) 15%, rgba( 0, 0, 0, 0.2 ) 45% );
+			position: absolute;
+			bottom: -20px;
+			left: 50%;
+			margin-left: -10px;
+			height: 20px; width: 20px;
+			transform: rotate( -45deg );
+
+			border: 1px solid #aaa;
+		}
+
+		#header-menu ul.children li:first-child,
+		#header-menu ul.sub-menu li:first-child {
+			padding-top: 10px;
+		}
+
+		#header-menu ul.children li a, 
+		#header-menu ul.sub-menu li a {
+			background-color: #fafafa !important;
+			color: #555;
+			font-size: 90%;
+			border-left: 1px solid #aaa;
+			border-right: 1px solid #aaa;
+			padding: 2px 1em;
+		}
+			#header-menu ul.children li a:hover,
+			#header-menu ul.sub-menu li a:hover {
+				color: #dd4814;
+			}
+			#header-menu ul.children li:first-child a,
+			#header-menu ul.sub-menu li:first-child a {
+				padding-top: 7px;
+				border-top: 1px solid #aaa;
+				border-top-left-radius: 6px;
+				border-top-right-radius: 6px;
+			}
+			#header-menu ul.children li:last-child a,
+			#header-menu ul.sub-menu li:last-child a {
+				padding-bottom: 7px;
+				border-bottom: 1px solid #aaa;
+				border-bottom-left-radius: 6px;
+				border-bottom-right-radius: 6px;
+				background: #fafafa linear-gradient( to top, rgba( 0, 0, 0, 0.05 ), rgba( 0, 0, 0, 0 ) 30% );
+			}
+
+/*  Notifications  */
+#notifications {
+	background-color: #fcfcfc;
+	border: 1px solid #eaeaea;
+	border-top-left-radius: 4px;
+	border-top-right-radius: 4px;
+
+	box-shadow: 0 0 4px rgba( 0, 0, 0, 0.1 );
+}
+	#notifications .pad {
+		padding: 0.8em 2em;
+	}
+	#notifications div.widget + div.widget {
+		margin-top: 0.5em;
+	}
+	#notifications h2 {
+		clear: both;
+		display: inline;
+
+		font-size: 115%;
+		margin: 0 1em 0 0;
+	}
+	#notifications div.textwidget {
+		display: inline;
+
+		color: #555;
+	}
+
+/*  Main  */
+#main {
+	background-color: #fff;
+	border: 1px solid #eaeaea;
+	border-radius: 4px;
+
+	font-size: 105%;
+	font-weight: 300;
+
+	box-shadow: 0 0 4px rgba( 0, 0, 0, 0.1 );
+}
+	#main .pad {
+		padding: 1.5em 2em;
+	}
+	#notifications + #main {
+		border-top: none;
+		border-top-left-radius: 0;
+		border-top-right-radius: 0;
+	}
+
+	#main h1, #main h2, #main h3, #main h4, #main h5, #main h6 {
+		font-weight: 300;
+	}
+
+	#main h1,
+	#main h2 {
+		color: #555;
+		margin-bottom: 1em;
+	}
+	#main h1 {
+		font-size: 250%;
+		border: none;
+	}
+		#main h1.post-title {
+			margin-top: 1em;
+		}
+			#main div:first-child h1.post-title {
+				margin-top: 0;
+				margin-bottom: 0.7em;
+			}
+			#main h1.post-title.non-single {
+				font-size: 180%;
+				margin-bottom: 1em !important;
+			}
+	#main h2 {
+		margin-top: 1.5em;
+	}
+
+	body.home #main .entry h1:first-child {
+		margin-top: 0;
+		font-size: 210%;
+	}
+
+	#main img {
+		max-width: 100%;
+		height: auto;
+	}
+
+	#main .uc-content-block {
+		margin-top: 2.5em;
+		padding-top: 1.5em;
+		border-top: 1px dashed #ddd;
+	}
+		#main .uc-content-block:first-child {
+			border: none;
+			padding-top: 0;
+			margin-top: 0;
+		}
+		#main .uc-content-block:last-child {
+			padding-bottom: 1em;
+		}
+
+	#main .post-meta {
+		color: #888;
+		font-size: 110%;
+		line-height: 1.4em;
+	}
+		#main .post-meta a {
+			color: #888;
+		}
+		#main .post-title + .post-meta {
+			margin-top: -1.6em;
+			margin-bottom: 1.4em;
+		}
+
+	#main .post-post {
+		font-size: 120% !important;
+		line-height: 1.6em;
+	}
+		#main .post-post ul {
+			margin-left: 0.7em !important;
+		}
+			#main .post-post ul li {
+				list-style-type: none;
+			}
+				#main .post-post ul li:before {
+					content: "––";
+					padding-right: 0.7em;
+				}
+			#main .post-post li ol,
+			#main .post-post li ul {
+				margin-left: 2em !important;
+			}
+
+/*  Main with sidebar  */
+
+body.has-sidebar #main .pad {
+	display: flex;
+}
+
+body.has-sidebar #main #content {
+	flex-grow: 1;
+	width: auto;
+}
+
+body.has-sidebar #main #sidebar {
+	flex: 0 0 250px;
+	width: 250px;
+	max-width: 250px;
+	padding-left: 3em;
+	box-sizing: border-box;
+}
+	body.has-sidebar #main #sidebar .widget {
+		padding: 1.2em;
+		margin-bottom: 1em;
+		background-color: rgba( 0, 0, 0, 0.03 );
+	}
+	body.has-sidebar #main #sidebar .widget :first-child {
+		margin-top: 0;
+	}
+	body.has-sidebar #main #sidebar .widget :last-child {
+		margin-bottom: 0;
+	}
+
+/*  Comments  */
+#comments {
+	font-size: 105%;
+	line-height: 1.4em;
+}
+	#comments h2 {
+		color: #aea79f; /* TODO */
+
+		margin: 2em 0 0 0;
+		padding: 0 0 0.5em 0;
+
+		border-bottom: 1px solid rgba( 0, 0, 0, 0.1 );
+	}
+	.comment {
+		padding: 0.7em 1em;
+		border-bottom: 1px solid rgba( 0, 0, 0, 0.1 );
+	}
+		.comment.comment-author-logged {
+			background-color: rgba( 0, 0, 0, 0.1 );
+		}
+		.comment-meta {
+			box-sizing: border-box;
+
+			width: 25%;
+			float: left;
+
+			padding-right: 1em;
+		}
+			.comment-meta .comment-author {
+				font-weight: 400;
+			}
+			.comment-meta .comment-date {
+				color: #888;
+			}
+		.comment-comment {
+			width: 75%;
+			float: left;
+		}
+
+#reply {
+	padding: 0.7em 0;
+	border-bottom: none;
+}
+	#reply .comment-form {
+		position: relative;
+	}
+	#reply h3 {
+		margin: 0 0 0.5em 0;
+	}
+	#reply input,
+	#reply textarea {
+		box-sizing: border-box;
+		width: 100%;
+
+		border: none;
+		padding: 0.5em;
+		margin: 0 0 0.5em 0;
+		background-color: rgba( 0, 0, 0, 0.1 );
+
+		font-family: 'Ubuntu', 'Bitstream Vera Sans', 'DejaVu Sans', Tahoma, sans-serif;
+	}
+		#reply input[type="submit"] {
+			width: 200px;
+			float: right;
+		}
+		#reply textarea {
+			font-size: 100%;
+			font-weight: 300;
+			line-height: 1.4em;
+		}
+	#reply .comment-meta {
+		position: absolute;
+		top: 0;
+	}
+	#reply #comment {
+		width: 75%;
+		float: right;
+	}
+	#reply .comment-description {
+		display: inline-block;
+
+		margin-top: 1em;
+		font-size: 90%;
+		line-height: 1.4em;
+		color: #777;
+	}
+
+/*  Main: archive  */
+
+.uc-archive-list {
+	color: #888;
+	font-size: 110%;
+	line-height: 1.4em;
+}
+	.uc-archive-list li {
+		margin-bottom: 1em;
+	}
+	.uc-archive-list span.post-title {
+		font-size: 140%;
+	}
+
+/*  Footer  */
+
+#footnote,
+#footer {
+	background-color: #f1f1f1;
+	border-radius: 0 !important;
+
+	border-top: 1px solid #ddd;
+	border-bottom: 1px solid #ddd;
+	font-weight: 300;
+	font-size: 90%;
+}
+	#main + #footnote,
+	#main + #footer {
+		margin-top: 2.5em;
+	}
+	#footnote + #footer {
+		border-top: none;
+	}
+
+	#footnote a,
+	#footer a {
+		color: #333;
+	}
+		#footnote a:hover, #footnote a:active, #footnote a:focus,
+		#footer a:hover, #footer a:active, #footer a:focus {
+			color: #dd4814;
+		}
+
+#footnote {
+	padding: 1.5em 0;
+	line-height: 1.4em;
+}
+	#footnote a {
+		display: block;
+	}
+	#footnote h2 {
+		margin-top: 0;
+		font-size: 110%;
+	}
+	#footnote p {
+		margin-bottom: 0.5em;
+	}
+	#footnote li {
+		text-indent: -1em;
+		margin-left: 1em;
+		line-height: 1.3em;
+		margin-bottom: 0.7em;
+	}
+
+	#footnote .inside {
+		display: flex;
+	}
+
+	#footnote div.widget {
+		flex: 1;
+		width: 50%;
+
+		padding: 0 2% 1em 2%;
+		border-right: 1px dotted #bbb;
+	}
+		#footnote div.widget:first-child {
+			padding-left: 0;
+		}
+		#footnote div.widget:last-child {
+			padding-right: 0;
+			border-right-width: 0;
+		}
+
+	#footnote li,
+	#footnote .menu li {
+		margin-bottom: 0.3em;
+	}
+	#footnote .sub-menu {
+		margin-top: 0.3em;
+	}
+		
+#footer {
+	padding: 0.8em 0;
+}
+	#footer .inside div {
+		display: inline-block;
+	}
+	#footer div.widget + div.widget {
+		clear: both;
+		margin-top: 0.7em;
+	}
+	#footer h2 {
+		font-size: 110%;
+		display: inline;
+	}
+		#footer h2:after {
+			content: ":";
+			margin-right: 2em;
+		}
+	#footer ul.menu {
+		display: inline-block;
+	}
+	#footer li {
+		display: inline;
+	}
+		#footer li:after {
+			content: "|";
+			padding: 0 1em;
+		}
+		#footer li:last-child:after {
+			content: "";
+		}
+	#footer ul.sub-menu {
+		display: none;
+	}
+
+/*  Template styles
+ *
+ */
+
+.flex.sc_columns {
+	margin: 2em 0;
+}
+
+.flex.sc_columns .item :first-child {
+	margin-top: 0 !important;
+}
+.flex.sc_columns .item :last-child {
+	margin-bottom: 0 !important;
+}
+
+.flex.sc_columns .item {
+	margin-right: 2em;
+}

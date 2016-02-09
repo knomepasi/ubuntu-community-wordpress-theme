@@ -21,7 +21,7 @@ function ubuntucommunity_menu_width( ) {
 	logo_width = jQuery( '#header-logo' ).outerWidth( true );
 
 	// Simulate a medium sized screen
-	jQuery( 'head' ).append( '<link rel="stylesheet" id="menu-js" href="' + ubuntucommunity.theme_url + '/style-resp-menu-small.css" type="text/css" media="only screen" />' );
+	jQuery( 'head' ).append( '<link rel="stylesheet" id="menu-js" href="' + ubuntucommunity.theme_url + '/css/style-resp-menu-small.css" type="text/css" media="only screen" />' );
 	menu_small_width = jQuery( '#header-menu' ).outerWidth( true );
 	jQuery( '#menu-js' ).remove( );
 
@@ -32,8 +32,8 @@ function ubuntucommunity_menu_width( ) {
 	var menu_full_min = menu_width + logo_width + padding;
 	var menu_small_min = menu_small_width + logo_width + padding;
 
-	jQuery( 'head' ).append( '<link rel="stylesheet" class="menu-js" id="menu-js-small" href="' + ubuntucommunity.theme_url + '/style-resp-menu-small.css" type="text/css" media="only screen and (max-width:' + menu_full_min + 'px)" />' );
-	jQuery( 'head' ).append( '<link rel="stylesheet" class="menu-js" id="menu-js-tiny" href="' + ubuntucommunity.theme_url + '/style-resp-menu-tiny.css" type="text/css" media="only screen and (max-width:' + menu_small_min + 'px)" />' );
+	jQuery( 'head' ).append( '<link rel="stylesheet" class="menu-js" id="menu-js-small" href="' + ubuntucommunity.theme_url + '/css/style-resp-menu-small.css" type="text/css" media="only screen and (max-width:' + menu_full_min + 'px)" />' );
+	jQuery( 'head' ).append( '<link rel="stylesheet" class="menu-js" id="menu-js-tiny" href="' + ubuntucommunity.theme_url + '/css/style-resp-menu-tiny.css" type="text/css" media="only screen and (max-width:' + menu_small_min + 'px)" />' );
 }
 
 function determine_em_width( ) {

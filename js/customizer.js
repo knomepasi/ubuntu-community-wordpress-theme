@@ -34,6 +34,13 @@ jQuery( function( ) {
 		} );
 	} );
 
+	// Sidebar links
+	wp.customize( 'ubuntucommunity_sidebar_link_color', function( value ) {
+		value.bind( function( to ) {
+			style.append( '#sidebar a, a:link, #sidebar a:active, #sidebar a:hover, #sidebar a:active, #sidebar a:focus { color: ' + to + '; }' );
+		} );
+	} );
+
 	// Footer links
 	wp.customize( 'ubuntucommunity_footer_link_color', function( value ) {
 		value.bind( function( to ) {

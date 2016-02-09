@@ -72,27 +72,27 @@ add_action( 'wp_enqueue_scripts', 'ubuntucommunity_scripts' );
 
 function ubuntucommunity_scripts( ) {
 	// Eric Meyer: CSS reset | http://meyerweb.com/eric/thoughts/2007/05/01/reset-reloaded/
-	wp_enqueue_style( 'css-reset', get_stylesheet_directory_uri( ) . '/reset.css' );
+	wp_enqueue_style( 'css-reset', get_stylesheet_directory_uri( ) . '/css/reset.css' );
 
 	// Main style sheets
-	wp_enqueue_style( 'ubuntucommunity-style-common', get_stylesheet_directory_uri( ) . '/style-common.css', array( 'css-reset' ) );
-	wp_enqueue_style( 'ubuntucommunity-style', get_stylesheet_directory_uri( ) . '/style.css', array( 'css-reset' ) );
+	wp_enqueue_style( 'ubuntucommunity-style-common', get_stylesheet_directory_uri( ) . '/css/style-common.css', array( 'css-reset' ) );
+	wp_enqueue_style( 'ubuntucommunity-style', get_stylesheet_directory_uri( ) . '/css/style.css', array( 'css-reset' ) );
 
 	// Dark variant
 	if( get_theme_mod( 'ubuntucommunity_darkvariant' ) == true ) {
-		wp_enqueue_style( 'ubuntucommunity-style-dark', get_stylesheet_directory_uri( ) . '/style-dark.css', array( 'ubuntucommunity-style' ) );
+		wp_enqueue_style( 'ubuntucommunity-style-dark', get_stylesheet_directory_uri( ) . '/css/style-dark.css', array( 'ubuntucommunity-style' ) );
 	}
 
 	// Font stylesheets
-	wp_enqueue_style( 'font-ubuntu', get_stylesheet_directory_uri( ) . '/style-font-ubuntu.css' );
+	wp_enqueue_style( 'font-ubuntu', get_stylesheet_directory_uri( ) . '/css/style-font-ubuntu.css' );
 
 	// Responsive design
-	wp_enqueue_style( 'ubuntucommunity-style-resp-1000', get_stylesheet_directory_uri( ) . '/style-resp-1000.css', array( 'ubuntucommunity-style' ), null, 'only screen and (max-width:1000px)' );
-	wp_enqueue_style( 'ubuntucommunity-style-resp-800', get_stylesheet_directory_uri( ) . '/style-resp-800.css', array( 'ubuntucommunity-style', 'ubuntucommunity-style-resp-1000' ), null, 'only screen and (max-width:800px)' );
-	wp_enqueue_style( 'ubuntucommunity-style-resp-640', get_stylesheet_directory_uri( ) . '/style-resp-640.css', array( 'ubuntucommunity-style', 'ubuntucommunity-style-resp-800' ), null, 'only screen and (max-width:640px)' );
+	wp_enqueue_style( 'ubuntucommunity-style-resp-1000', get_stylesheet_directory_uri( ) . '/css/style-resp-1000.css', array( 'ubuntucommunity-style' ), null, 'only screen and (max-width:1000px)' );
+	wp_enqueue_style( 'ubuntucommunity-style-resp-800', get_stylesheet_directory_uri( ) . '/css/style-resp-800.css', array( 'ubuntucommunity-style', 'ubuntucommunity-style-resp-1000' ), null, 'only screen and (max-width:800px)' );
+	wp_enqueue_style( 'ubuntucommunity-style-resp-640', get_stylesheet_directory_uri( ) . '/css/style-resp-640.css', array( 'ubuntucommunity-style', 'ubuntucommunity-style-resp-800' ), null, 'only screen and (max-width:640px)' );
 
 	// JS
-	wp_enqueue_script( 'ubuntucommunity-js-menu', get_stylesheet_directory_uri( ) . '/script-menu.js', array( 'jquery' ), '1' );
+	wp_enqueue_script( 'ubuntucommunity-js-menu', get_stylesheet_directory_uri( ) . '/js/menu.js', array( 'jquery' ), '1' );
 	wp_localize_script( 'ubuntucommunity-js-menu', 'ubuntucommunity', array( 'theme_url' => get_stylesheet_directory_uri( ) ) );
 }
 
@@ -101,10 +101,10 @@ function ubuntucommunity_scripts( ) {
  *
  */
 
-add_editor_style( 'reset.css' );
-add_editor_style( 'style-common.css' );
-add_editor_style( 'style-editor.css' );
-add_editor_style( 'style-font-ubuntu.css' );
+add_editor_style( 'css/reset.css' );
+add_editor_style( 'css/style-common.css' );
+add_editor_style( 'css/style-editor.css' );
+add_editor_style( 'css/style-font-ubuntu.css' );
 
 /*
  *  Shortcodes for simple columns
@@ -149,10 +149,23 @@ function ubuntucommunity_columns( $atts, $content, $code ) {
 add_action( 'customize_register', 'ubuntucommunity_customize_register' );
 
 function ubuntucommunity_customize_register( $wp_customize ) {
-	$wp_customize->add_section( 'ubuntucommunity', array(
-		'title' => 'Ubuntu Community Theme',
-		'priority' => 20,
+	// Site Identity
+	// section: title_tagline
+
+	$wp_customize->add_setting( 'ubuntucommunity_header_logo', array(
+		'default'           => null,
+		'transport'         => 'postMessage',
 	) );
+
+	$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'ubuntucommunity_header_logo', array(
+		'label'       => __( 'Header logo', 'ubuntu-community' ),
+		'description' => __( 'The logo to show in the right side of the header. If an image is not set, a Ubuntu logo is used.', 'ubuntu-community' ),
+		'section'     => 'title_tagline',
+		'height'      => '25'
+	) ) );
+
+	// Colors
+	// section: colors
 
 	$wp_customize->add_setting( 'ubuntucommunity_header_bg_color', array(
 		'default'           => '#dd4814',
@@ -162,7 +175,7 @@ function ubuntucommunity_customize_register( $wp_customize ) {
 
 	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'ubuntucommunity_header_bg_color', array(
 		'label'       => __( 'Header Background Color', 'ubuntu-community' ),
-		'section'     => 'ubuntucommunity',
+		'section'     => 'colors',
 	) ) );
 
 	$wp_customize->add_setting( 'ubuntucommunity_header_link_color', array(
@@ -174,7 +187,7 @@ function ubuntucommunity_customize_register( $wp_customize ) {
 	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'ubuntucommunity_header_link_color', array(
 		'label'       => __( 'Navigation Link Color', 'ubuntu-community' ),
 		'description' => __( 'The color for hovered menu items in the header dropdown menu.', 'ubuntu-community' ),
-		'section'     => 'ubuntucommunity',
+		'section'     => 'colors',
 	) ) );
 
 	$wp_customize->add_setting( 'ubuntucommunity_link_color', array(
@@ -186,7 +199,19 @@ function ubuntucommunity_customize_register( $wp_customize ) {
 	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'ubuntucommunity_link_color', array(
 		'label'       => __( 'Link Color', 'ubuntu-community' ),
 		'description' => __( 'The color for links in the main content area.', 'ubuntu-community' ),
-		'section'     => 'ubuntucommunity',
+		'section'     => 'colors',
+	) ) );
+
+	$wp_customize->add_setting( 'ubuntucommunity_sidebar_link_color', array(
+		'default'           => '#777777',
+		'sanitize_callback' => 'sanitize_hex_color',
+		'transport'         => 'postMessage',
+	) );
+
+	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'ubuntucommunity_sidebar_link_color', array(
+		'label'       => __( 'Sidebar Link Color', 'ubuntu-community' ),
+		'description' => __( 'The color for links in the sidebar in the main content area.', 'ubuntu-community' ),
+		'section'     => 'colors',
 	) ) );
 
 	$wp_customize->add_setting( 'ubuntucommunity_footer_link_color', array(
@@ -198,20 +223,9 @@ function ubuntucommunity_customize_register( $wp_customize ) {
 	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'ubuntucommunity_footer_link_color', array(
 		'label'       => __( 'Footer Link Color', 'ubuntu-community' ),
 		'description' => __( 'The color for links in the footer.', 'ubuntu-community' ),
-		'section'     => 'ubuntucommunity',
+		'section'     => 'colors',
 	) ) );
 
-	$wp_customize->add_setting( 'ubuntucommunity_header_logo', array(
-		'default'           => null,
-		'transport'         => 'postMessage',
-	) );
-
-	$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'ubuntucommunity_header_logo', array(
-		'label'       => __( 'Header logo', 'ubuntu-community' ),
-		'description' => __( 'The logo to show in the right side of the header. If an image is not set, a Ubuntu logo is used.', 'ubuntu-community' ),
-		'section'     => 'ubuntucommunity',
-		'height'      => '25'
-	) ) );
 
 	$wp_customize->add_setting( 'ubuntucommunity_darkvariant', array(
 		'default'           => false,
@@ -220,8 +234,16 @@ function ubuntucommunity_customize_register( $wp_customize ) {
 	$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'ubuntucommunity_darkvariant', array(
 		'type'        => 'checkbox',
 		'label'       => __( 'Use the dark background variant?', 'ubuntu-community' ),
-		'section'     => 'ubuntucommunity',
+		'section'     => 'colors',
 	) ) );
+
+	// Posts
+	// section: posts
+
+	$wp_customize->add_section( 'posts', array(
+		'title' => 'Posts',
+		'priority' => 40,
+	) );
 
 	$wp_customize->add_setting( 'ubuntucommunity_showauthor', array(
 		'default'           => false,
@@ -230,7 +252,7 @@ function ubuntucommunity_customize_register( $wp_customize ) {
 	$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'ubuntucommunity_showauthor', array(
 		'type'        => 'checkbox',
 		'label'       => __( 'Show authors for posts?', 'ubuntu-community' ),
-		'section'     => 'ubuntucommunity',
+		'section'     => 'posts',
 	) ) );
 }
 
@@ -247,6 +269,7 @@ function ubuntucommunity_customizer_css( ) {
 		'ubuntucommunity_header_bg_color' => '#header, #header-menu .menu > ul, #header-menu ul.menu { background-color: %s; }',
 		'ubuntucommunity_header_link_color' => '#header-menu ul.children li a:hover, #header-menu ul.sub-menu li a:hover { color: %s; }',
 		'ubuntucommunity_link_color' => '#main a, a:link, #main a:active, #main a:hover, #main a:active, #main a:focus { color: %s; }',
+		'ubuntucommunity_sidebar_link_color' => '#sidebar a, a:link, #sidebar a:active, #sidebar a:hover, #sidebar a:active, #sidebar a:focus { color: %s; }',
 		'ubuntucommunity_footer_link_color' => '#footnote a:hover, #footnote a:active, #footnote a:focus, #footer a:hover, #footer a:active, #footer a:focus { color: %s; }'
 	);
 
@@ -268,7 +291,7 @@ function ubuntucommunity_customizer_css( ) {
 add_action( 'admin_enqueue_scripts', 'ubuntucommunity_admin_scripts' );
 
 function ubuntucommunity_admin_scripts( ) {
-	wp_enqueue_style( 'ubuntucommunity-style-admin', get_stylesheet_directory_uri( ) . '/style-admin.css' );
+	wp_enqueue_style( 'ubuntucommunity-style-admin', get_stylesheet_directory_uri( ) . '/css/style-admin.css' );
 }
 
 /*
