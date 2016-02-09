@@ -325,7 +325,7 @@ body.has-sidebar #main .pad {
 
 body.has-sidebar #main #content {
 	flex-grow: 1;
-	width: auto;
+	min-width: 0;
 }
 
 body.has-sidebar #main #sidebar {
