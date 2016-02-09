@@ -29,6 +29,9 @@
 #main {
 	border-radius: 0;
 }
+	body.has-sidebar #main .pad {
+		display: block;
+	}
 
 	body.has-sidebar #main #content,
 	body.has-sidebar #main #sidebar {

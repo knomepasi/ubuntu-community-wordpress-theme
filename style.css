@@ -319,14 +319,18 @@ body {
 
 /*  Main with sidebar  */
 
+body.has-sidebar #main .pad {
+	display: flex;
+}
+
 body.has-sidebar #main #content {
-	float: left;
-	width: 72%;
+	flex-grow: 2;
+	width: auto;
 }
 
 body.has-sidebar #main #sidebar {
-	float: right;
-	width: 28%;
+	flex-grow: 1;
+	width: 300px;
 	padding-left: 3em;
 	box-sizing: border-box;
 }
