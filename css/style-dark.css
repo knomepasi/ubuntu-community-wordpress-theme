@@ -44,6 +44,10 @@ body {
 			border-color: #111;
 		}
 
+	body.has-sidebar #main #sidebar .widget {
+		background-color: rgba( 0, 0, 0, 0.1 );
+	}
+
 #comments { }
 	#comments h2,
 	.comment {
