@@ -59,3 +59,9 @@ ol {
 	li ol, li ul {
 		margin-bottom: 0;
 	}
+
+/*  WordPress stuff  */
+
+.wp-caption {
+	max-width: 100%;
+}
