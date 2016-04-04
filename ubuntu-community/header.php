@@ -26,7 +26,7 @@
 				<?php if( get_theme_mod( 'ubuntucommunity_header_logo' ) ) { ?>
 					<img src="<?php echo get_theme_mod( 'ubuntucommunity_header_logo' ); ?>" alt="<?php bloginfo( 'name' ); ?>" />
 				<?php } else { ?>
-					<img src="<?php echo get_stylesheet_directory_uri( ); ?>/images/ubuntu-logo.png" alt="Ubuntu">
+					<img src="<?php echo get_template_directory_uri( ); ?>/images/ubuntu-logo.png" alt="Ubuntu">
 				<?php } ?>
 			</a>
 		</div>

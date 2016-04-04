@@ -14,7 +14,7 @@
 		<div id="content">
 			<?php
 				if( have_posts( ) ) {
-					if( is_archive( ) || is_search( ) || strlen( $_GET['s'] ) > 0 ) {
+					if( is_archive( ) || is_search( ) || ( isset( $_GET['s'] ) && strlen( $_GET['s'] ) > 0 ) ) {
 						get_template_part( 'content', 'archive' );
 					} else {
 						get_template_part( 'content' );
