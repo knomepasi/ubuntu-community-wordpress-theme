@@ -48,5 +48,10 @@ jQuery( function( ) {
 		} );
 	} );
 
-
+	// Button links
+	wp.customize( 'ubuntucommunity_button_link_bg_color', function( value ) {
+		value.bind( function( to ) {
+			style.append( '#main a.button { background-color: ' + to + '; }' );
+		} );
+	} );
 } );

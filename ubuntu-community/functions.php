@@ -110,6 +110,40 @@ add_editor_style( 'css/style-editor.css' );
 add_editor_style( 'css/style-font-ubuntu.css' );
 
 /*
+ *  Add some templates to the TinyMCE editor
+ *
+ */
+
+add_action( 'mce_buttons_2', 'ubuntucommunity_mce_buttons_2' );
+
+function ubuntucommunity_mce_buttons_2( $buttons ) {
+	foreach( $buttons as $button ) {
+		$new_buttons[] = $button;
+		if( $button == 'formatselect' ) {
+			$new_buttons[] = 'styleselect';
+		}
+	}
+
+	return $new_buttons;
+}
+
+add_action( 'tiny_mce_before_init', 'ubuntucommunity_tiny_mce_before_init' );
+
+function ubuntucommunity_tiny_mce_before_init( $init_array ) {
+	$style_formats = array(
+		array(
+			'title' => 'Button link',
+			'selector' => 'a',
+			'classes' => 'button'
+		),
+	);
+
+	$init_array['style_formats'] = json_encode( $style_formats );
+
+	return $init_array;
+}
+
+/*
  *  Shortcodes for simple columns
  *
  */
@@ -155,6 +189,8 @@ function ubuntucommunity_customize_register( $wp_customize ) {
 	// Site Identity
 	// section: title_tagline
 
+	// Header logo
+
 	$wp_customize->add_setting( 'ubuntucommunity_header_logo', array(
 		'default'           => null,
 		'transport'         => 'postMessage',
@@ -170,6 +206,8 @@ function ubuntucommunity_customize_register( $wp_customize ) {
 	// Colors
 	// section: colors
 
+	// Header background color
+
 	$wp_customize->add_setting( 'ubuntucommunity_header_bg_color', array(
 		'default'           => '#dd4814',
 		'sanitize_callback' => 'sanitize_hex_color',
@@ -177,9 +215,11 @@ function ubuntucommunity_customize_register( $wp_customize ) {
 	) );
 
 	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'ubuntucommunity_header_bg_color', array(
-		'label'       => __( 'Header Background Color', 'ubuntu-community' ),
+		'label'       => __( 'Header background color', 'ubuntu-community' ),
 		'section'     => 'colors',
 	) ) );
+
+	// Navigation link color
 
 	$wp_customize->add_setting( 'ubuntucommunity_header_link_color', array(
 		'default'           => '#dd4814',
@@ -188,10 +228,12 @@ function ubuntucommunity_customize_register( $wp_customize ) {
 	) );
 
 	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'ubuntucommunity_header_link_color', array(
-		'label'       => __( 'Navigation Link Color', 'ubuntu-community' ),
+		'label'       => __( 'Navigation link color', 'ubuntu-community' ),
 		'description' => __( 'The color for hovered menu items in the header dropdown menu.', 'ubuntu-community' ),
 		'section'     => 'colors',
 	) ) );
+
+	// Link color
 
 	$wp_customize->add_setting( 'ubuntucommunity_link_color', array(
 		'default'           => '#dd4814',
@@ -200,10 +242,12 @@ function ubuntucommunity_customize_register( $wp_customize ) {
 	) );
 
 	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'ubuntucommunity_link_color', array(
-		'label'       => __( 'Link Color', 'ubuntu-community' ),
+		'label'       => __( 'Link color', 'ubuntu-community' ),
 		'description' => __( 'The color for links in the main content area.', 'ubuntu-community' ),
 		'section'     => 'colors',
 	) ) );
+
+	// Sidebar link color
 
 	$wp_customize->add_setting( 'ubuntucommunity_sidebar_link_color', array(
 		'default'           => '#777777',
@@ -212,10 +256,12 @@ function ubuntucommunity_customize_register( $wp_customize ) {
 	) );
 
 	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'ubuntucommunity_sidebar_link_color', array(
-		'label'       => __( 'Sidebar Link Color', 'ubuntu-community' ),
+		'label'       => __( 'Sidebar link color', 'ubuntu-community' ),
 		'description' => __( 'The color for links in the sidebar in the main content area.', 'ubuntu-community' ),
 		'section'     => 'colors',
 	) ) );
+
+	// Footer link color
 
 	$wp_customize->add_setting( 'ubuntucommunity_footer_link_color', array(
 		'default'           => '#dd4814',
@@ -224,11 +270,26 @@ function ubuntucommunity_customize_register( $wp_customize ) {
 	) );
 
 	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'ubuntucommunity_footer_link_color', array(
-		'label'       => __( 'Footer Link Color', 'ubuntu-community' ),
+		'label'       => __( 'Footer link color', 'ubuntu-community' ),
 		'description' => __( 'The color for links in the footer.', 'ubuntu-community' ),
 		'section'     => 'colors',
 	) ) );
 
+	// Button link background color
+
+	$wp_customize->add_setting( 'ubuntucommunity_button_link_bg_color', array(
+		'default'           => '#dd4814',
+		'sanitize_callback' => 'sanitize_hex_color',
+		'transport'         => 'postMessage',
+	) );
+
+	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'ubuntucommunity_button_link_bg_color', array(
+		'label'       => __( 'Button link background color', 'ubuntu-community' ),
+		'description' => __( 'The background color for links styled like buttons. Note that the text color is white. This template is available from the TinyMCE editor.', 'ubuntu-community' ),
+		'section'     => 'colors',
+	) ) );
+
+	// Use the dark background variant?
 
 	$wp_customize->add_setting( 'ubuntucommunity_darkvariant', array(
 		'default'           => false,
@@ -247,6 +308,8 @@ function ubuntucommunity_customize_register( $wp_customize ) {
 		'title' => 'Posts',
 		'priority' => 40,
 	) );
+
+	// Show authors for posts?
 
 	$wp_customize->add_setting( 'ubuntucommunity_showauthor', array(
 		'default'           => false,
@@ -273,9 +336,10 @@ function ubuntucommunity_customizer_css( ) {
 	$mods = array(
 		'ubuntucommunity_header_bg_color' => '#header, #header-menu .menu > ul, #header-menu ul.menu { background-color: %s; }',
 		'ubuntucommunity_header_link_color' => '#header-menu ul.children li a:hover, #header-menu ul.sub-menu li a:hover { color: %s; }',
-		'ubuntucommunity_link_color' => '#main a, a:link, #main a:active, #main a:hover, #main a:active, #main a:focus { color: %s; }',
-		'ubuntucommunity_sidebar_link_color' => '#sidebar a, a:link, #sidebar a:active, #sidebar a:hover, #sidebar a:active, #sidebar a:focus { color: %s; }',
-		'ubuntucommunity_footer_link_color' => '#footnote a:hover, #footnote a:active, #footnote a:focus, #footer a:hover, #footer a:active, #footer a:focus { color: %s; }'
+		'ubuntucommunity_link_color' => '#main a, #main a:link, #main a:visited, #main a:hover, #main a:active, #main a:focus { color: %s; }',
+		'ubuntucommunity_sidebar_link_color' => '#sidebar a, #sidebar a:link, #sidebar a:visited, #sidebar a:hover, #sidebar a:active, #sidebar a:focus { color: %s; }',
+		'ubuntucommunity_footer_link_color' => '#footnote a, #footnote a:link, #footnote a:visited, #footer a:hover, #footer a:active, #footer a:focus { color: %s; }',
+		'ubuntucommunity_button_link_bg_color' => '#main a.button { background-color: %s; }'
 	);
 
 	foreach( $mods as $mod => $css_template ) {

@@ -65,3 +65,16 @@ ol {
 .wp-caption {
 	max-width: 100%;
 }
+
+/*  TinyMCE templates  */
+
+#main a.button, #main a.button:link {
+	padding: 0.5em 0.65em;
+	border-radius: 3px;
+	background-color: #dd4814;
+	color: #fff;
+	text-decoration: none;
+}
+	#main a.button:hover, #main a.button:active, #main a.button:focus {
+		background-image: linear-gradient( to top, rgba( 0, 0, 0, 0.15 ), rgba( 0, 0, 0, 0.15 ) );
+	}

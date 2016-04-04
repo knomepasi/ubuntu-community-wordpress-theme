@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-02-09 19:22+0200\n"
+"POT-Creation-Date: 2016-04-04 20:39+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -95,57 +95,67 @@ msgstr ""
 msgid "Header Menu"
 msgstr ""
 
-#: functions.php:161
+#: functions.php:200
 msgid "Header logo"
 msgstr ""
 
-#: functions.php:162
+#: functions.php:201
 msgid ""
-"The logo to show in the right side of the header. If an image is not set, a "
-"Ubuntu logo is used."
+"The logo to show in the right side of the header. The image is resized to a "
+"maximum height of 25 pixels. If an image is not set, the Ubuntu logo is used."
 msgstr ""
 
-#: functions.php:177
-msgid "Header Background Color"
+#: functions.php:218
+msgid "Header background color"
 msgstr ""
 
-#: functions.php:188
-msgid "Navigation Link Color"
+#: functions.php:231
+msgid "Navigation link color"
 msgstr ""
 
-#: functions.php:189
+#: functions.php:232
 msgid "The color for hovered menu items in the header dropdown menu."
 msgstr ""
 
-#: functions.php:200
-msgid "Link Color"
+#: functions.php:245
+msgid "Link color"
 msgstr ""
 
-#: functions.php:201
+#: functions.php:246
 msgid "The color for links in the main content area."
 msgstr ""
 
-#: functions.php:212
-msgid "Sidebar Link Color"
+#: functions.php:259
+msgid "Sidebar link color"
 msgstr ""
 
-#: functions.php:213
+#: functions.php:260
 msgid "The color for links in the sidebar in the main content area."
 msgstr ""
 
-#: functions.php:224
-msgid "Footer Link Color"
+#: functions.php:273
+msgid "Footer link color"
 msgstr ""
 
-#: functions.php:225
+#: functions.php:274
 msgid "The color for links in the footer."
 msgstr ""
 
-#: functions.php:236
+#: functions.php:287
+msgid "Button link background color"
+msgstr ""
+
+#: functions.php:288
+msgid ""
+"The background color for links styled like buttons. Note that the text color "
+"is white. This template is available from the TinyMCE editor."
+msgstr ""
+
+#: functions.php:300
 msgid "Use the dark background variant?"
 msgstr ""
 
-#: functions.php:254
+#: functions.php:320
 msgid "Show authors for posts?"
 msgstr ""
 
