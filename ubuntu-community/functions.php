@@ -209,7 +209,7 @@ function ubuntucommunity_customize_register( $wp_customize ) {
 	// Header background color
 
 	$wp_customize->add_setting( 'ubuntucommunity_header_bg_color', array(
-		'default'           => '#dd4814',
+		'default'           => '#e95420',
 		'sanitize_callback' => 'sanitize_hex_color',
 		'transport'         => 'postMessage',
 	) );
@@ -222,7 +222,7 @@ function ubuntucommunity_customize_register( $wp_customize ) {
 	// Navigation link color
 
 	$wp_customize->add_setting( 'ubuntucommunity_header_link_color', array(
-		'default'           => '#dd4814',
+		'default'           => '#e95420',
 		'sanitize_callback' => 'sanitize_hex_color',
 		'transport'         => 'postMessage',
 	) );
@@ -236,7 +236,7 @@ function ubuntucommunity_customize_register( $wp_customize ) {
 	// Link color
 
 	$wp_customize->add_setting( 'ubuntucommunity_link_color', array(
-		'default'           => '#dd4814',
+		'default'           => '#e95420',
 		'sanitize_callback' => 'sanitize_hex_color',
 		'transport'         => 'postMessage',
 	) );
@@ -264,7 +264,7 @@ function ubuntucommunity_customize_register( $wp_customize ) {
 	// Footer link color
 
 	$wp_customize->add_setting( 'ubuntucommunity_footer_link_color', array(
-		'default'           => '#dd4814',
+		'default'           => '#e95420',
 		'sanitize_callback' => 'sanitize_hex_color',
 		'transport'         => 'postMessage',
 	) );
@@ -278,7 +278,7 @@ function ubuntucommunity_customize_register( $wp_customize ) {
 	// Button link background color
 
 	$wp_customize->add_setting( 'ubuntucommunity_button_link_bg_color', array(
-		'default'           => '#dd4814',
+		'default'           => '#e95420',
 		'sanitize_callback' => 'sanitize_hex_color',
 		'transport'         => 'postMessage',
 	) );
