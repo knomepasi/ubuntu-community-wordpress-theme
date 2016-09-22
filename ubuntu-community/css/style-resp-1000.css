@@ -3,8 +3,9 @@
 .outside {
 	width: auto;
 }
+
 .inside {
-	width: auto;
+	width: auto !important;
 	min-width: 0;
 }
 	#footnote .inside,

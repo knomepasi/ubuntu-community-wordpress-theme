@@ -5,3 +5,18 @@
 .outside {
 	width: auto;
 }
+
+#footnote .inside {
+	flex-wrap: wrap;
+}
+
+#footnote div.widget {
+	min-width: 100% !important;
+	padding: 0 !important;
+	margin: 0 0 1.5em 0 !important;
+	border: 0 !important;
+}
+
+#footnote div.widget :last-child {
+	margin-bottom: 0;
+}
