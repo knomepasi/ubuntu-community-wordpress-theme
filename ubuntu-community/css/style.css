@@ -507,6 +507,9 @@ body.has-sidebar #main #sidebar {
 			padding-right: 0;
 			border-right-width: 0;
 		}
+			#footnote div.widget *:last-child {
+				margin-bottom: 0;
+			}
 
 	#footnote li,
 	#footnote .menu li {

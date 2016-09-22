@@ -16,7 +16,6 @@
 	margin: 0 0 1.5em 0 !important;
 	border: 0 !important;
 }
-
-#footnote div.widget :last-child {
-	margin-bottom: 0;
-}
+	#footnote div.widget:last-child {
+		margin-bottom: 0 !important;
+	}
