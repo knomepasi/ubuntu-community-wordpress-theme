@@ -20,3 +20,10 @@
 	font-weight: 400;
 	font-style: normal;
 }
+
+@font-face {
+	font-family: 'Ubuntu';
+	src: url('../fonts/ubuntu-medium-webfont.woff2') format('woff2');
+	font-weight: 500;
+	font-style: normal;
+}
