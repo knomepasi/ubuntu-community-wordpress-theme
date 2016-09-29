@@ -96,7 +96,9 @@ function ubuntucommunity_scripts( ) {
 	wp_localize_script( 'ubuntucommunity-js-menu', 'ubuntucommunity', array( 'theme_url' => get_template_directory_uri( ) ) );
 
 	// If a child theme is in use, this loads the child themes main CSS file
-	wp_enqueue_style( 'ubuntucommunity-child-style', get_stylesheet_directory_uri( ) . '/style.css', array( 'ubuntucommunity-style' ) );
+	if( is_child_theme( ) ) {
+		wp_enqueue_style( 'ubuntucommunity-child-style', get_stylesheet_directory_uri( ) . '/style.css', array( 'ubuntucommunity-style' ) );
+	}
 }
 
 /*
