@@ -1,10 +1,8 @@
-@import 'style-resp-menu-tiny.css';
-
 #notifications,
 #main,
 .outside {
 	width: auto;
-	min-width: 320px !important;
+	min-width: 320px;
 }
 
 /* Content */
@@ -14,13 +12,11 @@
 	margin-top: 0.2em;
 }
 
-.comment-meta,
-.comment-comment,
+#reply .comment-meta,
 #reply #comment,
 #reply .comment-form {
 	width: 100%;
 	float: none;
-	position: static !important;
 }
 	.comment-meta {
 		padding: 0;
@@ -28,35 +24,13 @@
 	.comment-comment {
 		margin-top: 0.5em;
 	}
-	#reply input {
-		width: 100% !important;
+	#reply input[type="submit"] {
+		width: 100%;
 	}
 	#reply .comment-description {
 		display: block;
 		margin: 0 0 1em 0;
 	}
-
-/* Footer */
-
-#footnote {
-	padding: 0;
-}
-	#footnote .inside {
-		display: block;
-	}
-	#footnote div.widget {
-		width: 100%;
-		padding: 1.5em 0;
-
-		border: none;
-		border-bottom: 1px dotted rgba( 0, 0, 0, 0.3 );
-	}
-		#footnote div.widget:last-child {
-			border-bottom: none;
-		}
-			#footnote div.widget :last-child {
-				margin-bottom: 0;
-			}
 
 /* Template styles */
 
@@ -65,12 +39,6 @@
 }
 	.flex.sc_columns .item {
 		width: 100%;
-		border-bottom: 1px dotted rgba( 0, 0, 0, 0.3 );
+		margin-right: 0;
 		margin-bottom: 1em;
-		padding-bottom: 1em;
-	}
-
-	.flex.sc_columns .item:first-child {
-		padding-top: 1em;
-		border-top: 1px dotted rgba( 0, 0, 0, 0.3 );
 	}

@@ -32,27 +32,29 @@ img {
 }
 
 ul {
-	margin-left: 0.7em !important;
+	margin-left: 1.4em;
 }
 	ul li {
+		text-indent: -0.7em;
 		list-style-type: none;
 	}
 		ul li:before {
-			content: "––";
-			padding-right: 0.7em;
+			display: inline-block;
+			width: 0.7em;
+			content: "—";
 		}
-	li ol,
-	li ul {
-		margin-left: 2em !important;
-	}
 
-/* editor only */
+/* Editor only */
 body {
-	line-height: 1.6em !important;
+	line-height: 1.6em;
 }
 	body > :first-child {
-		margin-top: 0 !important;
+		margin-top: 0;
 	}
+
+b, strong {
+	font-weight: 500;
+}
 
 h1, h2, h3, h4, h5, h6 {
 	margin: 0.7em 0;

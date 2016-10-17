@@ -1,15 +1,20 @@
 body {
-	background-color: #4a4a4a;
+	background-color: #363636;
+	color: #ddd;
 }
+
+::selection { background-color: #ddd; color: #2a2a2a; }
+::-moz-selection { background-color: #ddd; color: #2a2a2a; }
+::-webkit-selection { background-color: #ddd; color: #2a2a2a; }
 
 #header {
 	border-color: #444;
 }
-	#header-menu ul.children li a, 
-	#header-menu ul.sub-menu li a {
-		background-color: #444 !important;
+	#header-menu .menu ul.children li a, 
+	#header-menu .menu ul.sub-menu li a {
+		background-color: #444;
 		color: #ddd;
-		border-color: #777 !important;
+		border-color: #777;
 	}
 
 		#header-menu li.menu-item-has-children:hover:after {
@@ -25,7 +30,6 @@ body {
 #notifications,
 #main {
 	border-color: #333;
-	color: #ddd;
 }
 	#notifications {
 		background-color: #333;
@@ -63,8 +67,6 @@ body {
 		color: #ddd;
 		background-color: rgba( 0, 0, 0, 0.2 );
 	}
-
-
 
 #footnote,
 #footer {

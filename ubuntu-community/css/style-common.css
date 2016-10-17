@@ -5,6 +5,15 @@ a, a:link, a:visited {
 		text-decoration: underline;
 	}
 
+p, blockquote, pre, address, dl, ol, ul, form, table, article {
+	margin-top: 1em;
+}
+	p:first-child, blockquote:first-child, pre:first-child,
+	address:first-child, dl:first-child, ol:first-child, ul:first-child,
+	form:first-child, table:first-child, article:first-child {
+		margin-top: 0;
+	}
+
 strong, b {
 	font-weight: 400;
 }
@@ -14,18 +23,20 @@ em, i {
 }
 
 ol {
-	margin-left: 0.7em;
+	margin-left: 1.4em;
 	counter-reset: steps;
 }
-	ol li:before {
-		display: inline-block;
-		margin-right: 0.7em;
-
-		content: counter(steps) ".";
-		counter-increment: steps;
+	ol li {
+		text-indent: -0.7em;
 	}
-		
+		ol li:before {
+			display: inline-block;
+			width: 0.7em;
 
+			content: counter(steps) ".";
+			counter-increment: steps;
+		}
+		
 	ol.steps li {
 		clear: left;
 		display: block;
@@ -69,10 +80,14 @@ ol {
 /*  TinyMCE templates  */
 
 #main a.button, #main a.button:link {
+	display: inline-block;
+	margin-right: 0.65em;
 	padding: 0.5em 0.65em;
 	border-radius: 3px;
+
 	background-color: #dd4814;
 	color: #fff;
+	font-weight: 400;
 	text-decoration: none;
 }
 	#main a.button:hover, #main a.button:active, #main a.button:focus {

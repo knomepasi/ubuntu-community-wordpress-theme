@@ -12,13 +12,17 @@
 </head>
 
 <?php
+	$classes = array( );
+
 	if( is_active_sidebar( 'widgets_sidebar_right' ) ) {
-		$class = 'has-sidebar';
-	} else {
-		$class = '';
+		$classes[] = 'has-sidebar';
+	}
+	if( get_theme_mod( 'ubuntucommunity_floatheader' ) == true ) {
+		$classes[] = 'float-header';
 	}
 ?>
-<body <?php body_class( $class ); ?>>
+
+<body <?php body_class( implode( ' ', $classes ) ); ?>>
 
 	<div id="header" class="outside"><div class="inside">
 		<div id="header-logo">

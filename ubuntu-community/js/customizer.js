@@ -12,7 +12,6 @@ jQuery( function( ) {
 		} );
 	} );
 	
-
 	// Header BG
 	wp.customize( 'ubuntucommunity_header_bg_color', function( value ) {
 		value.bind( function( to ) {
@@ -54,4 +53,12 @@ jQuery( function( ) {
 			style.append( '#main a.button { background-color: ' + to + '; }' );
 		} );
 	} );
+
+	// Floating header
+	wp.customize( 'ubuntucommunity_floatheader', function( value ) {
+		value.bind( function( to ) {
+			jQuery( 'body' ).addClass( 'float-header' );
+		} );
+	} );
+
 } );

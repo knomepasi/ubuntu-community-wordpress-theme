@@ -8,13 +8,16 @@ body {
 	line-height: 1.4em;
 }
 
+::selection { background-color: #333; color: #fff; }
+::-moz-selection { background-color: #333; color: #fff; }
+::-webkit-selection { background-color: #333; color: #fff; }
+
 .outside {
 	width: 100%;
 }
 
 .inside {
 	width: 90%;
-/*	min-width: 960px; */
 	max-width: 1600px;
 
 	margin: 0 auto;
@@ -28,8 +31,6 @@ body {
 #header {
 	background-color: #dd4814;
 	border-bottom: 1px solid #ccc;
-
-	margin-bottom: 2em;
 }
 	#header .inside {
 		height: 40px;
@@ -40,6 +41,17 @@ body {
 	#header a:active,
 	#header a:focus {
 		text-decoration: none;
+	}
+
+body.float-header #header {
+	position: fixed;
+	top: 0;
+}
+	body.float-header {
+		padding-top: 40px;
+	}
+	body.admin-bar.float-header #header {
+		top: 32px;
 	}
 
 /*  Logo  */
@@ -98,19 +110,19 @@ body {
 
 				#header-menu .menu > ul li.strong a,
 				#header-menu ul.menu li.strong a {
-					font-weight: 500 !important;
+					font-weight: 500;
 				}
 
 #header-menu ul.children,
 #header-menu ul.sub-menu {
-	background-color: transparent !important;
+	background-color: transparent;
 	display: none;
-	width: 250px !important;
+	width: 250px;
 	height: auto;
 
 	position: absolute;
 	z-index: 500;
-	top: 36px;
+	top: 22px;
 	left: -2px;
 	float: left;
 }
@@ -147,9 +159,9 @@ body {
 			padding-top: 10px;
 		}
 
-		#header-menu ul.children li a, 
-		#header-menu ul.sub-menu li a {
-			background-color: #fafafa !important;
+		#header-menu .menu ul.children li a, 
+		#header-menu .menu ul.sub-menu li a {
+			background-color: #fafafa;
 			color: #555;
 			font-size: 90%;
 			border-left: 1px solid #aaa;
@@ -178,6 +190,8 @@ body {
 
 /*  Notifications  */
 #notifications {
+	margin-top: 1.9em;
+
 	background-color: #fcfcfc;
 	border: 1px solid #eaeaea;
 	border-top-left-radius: 4px;
@@ -214,11 +228,16 @@ body {
 	font-weight: 300;
 
 	box-shadow: 0 0 4px rgba( 0, 0, 0, 0.1 );
+
+	margin-top: 1.9em;
+	margin-bottom: 2.2em;
 }
 	#main .pad {
 		padding: 1.5em 2em;
 	}
 	#notifications + #main {
+		margin-top: 0;
+
 		border-top: none;
 		border-top-left-radius: 0;
 		border-top-right-radius: 0;
@@ -238,15 +257,12 @@ body {
 		border: none;
 	}
 		#main h1.post-title {
-			margin-top: 1em;
+			margin-top: 0;
+			margin-bottom: 0.7em;
 		}
-			#main div:first-child h1.post-title {
-				margin-top: 0;
-				margin-bottom: 0.7em;
-			}
 			#main h1.post-title.non-single {
 				font-size: 180%;
-				margin-bottom: 1em !important;
+				margin-bottom: 1em;
 			}
 	#main h2 {
 		margin-top: 1.5em;
@@ -290,23 +306,22 @@ body {
 		}
 
 	#main .post-post {
-		font-size: 120% !important;
+		font-size: 120%;
 		line-height: 1.6em;
 	}
 		#main .post-post ul {
-			margin-left: 0.7em !important;
+			margin-left: 1.4em;
 		}
 			#main .post-post ul li {
+				text-indent: -0.7em;
 				list-style-type: none;
 			}
 				#main .post-post ul li:before {
-					content: "––";
-					padding-right: 0.7em;
+					display: inline-block;
+					width: 0.7em;
+
+					content: "—";
 				}
-			#main .post-post li ol,
-			#main .post-post li ul {
-				margin-left: 2em !important;
-			}
 
 /*  Main with sidebar  */
 
@@ -316,7 +331,6 @@ body.has-sidebar #main .pad {
 
 body.has-sidebar #main #content {
 	flex-grow: 1;
-	min-width: 0;
 }
 
 body.has-sidebar #main #sidebar {
@@ -395,7 +409,9 @@ body.has-sidebar #main #sidebar {
 		border: none;
 		padding: 0.5em;
 		margin: 0 0 0.5em 0;
+
 		background-color: rgba( 0, 0, 0, 0.1 );
+		color: #333;
 
 		font-family: 'Ubuntu', 'Bitstream Vera Sans', 'DejaVu Sans', Tahoma, sans-serif;
 	}
@@ -409,8 +425,9 @@ body.has-sidebar #main #sidebar {
 			line-height: 1.4em;
 		}
 	#reply .comment-meta {
-		position: absolute;
-		top: 0;
+		width: auto;
+		float: right;
+		padding-right: 0;
 	}
 	#reply #comment {
 		width: 75%;
@@ -444,17 +461,12 @@ body.has-sidebar #main #sidebar {
 #footnote,
 #footer {
 	background-color: #f1f1f1;
-	border-radius: 0 !important;
-
 	border-top: 1px solid #ddd;
 	border-bottom: 1px solid #ddd;
+
 	font-weight: 300;
 	font-size: 90%;
 }
-	#main + #footnote,
-	#main + #footer {
-		margin-top: 2.5em;
-	}
 	#footnote + #footer {
 		border-top: none;
 	}
@@ -560,13 +572,6 @@ body.has-sidebar #main #sidebar {
 
 .flex.sc_columns {
 	margin: 2em 0;
-}
-
-.flex.sc_columns .item :first-child {
-	margin-top: 0 !important;
-}
-.flex.sc_columns .item :last-child {
-	margin-bottom: 0 !important;
 }
 
 .flex.sc_columns .item {

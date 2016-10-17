@@ -1,21 +1,24 @@
-@import 'style-resp-menu-small.css';
-
 #notifications,
 #main,
 .outside {
 	width: auto;
 }
 
+/* Footer */
+
 #footnote .inside {
-	flex-wrap: wrap;
+	display: block;
 }
 
 #footnote div.widget {
-	min-width: 100% !important;
-	padding: 0 !important;
-	margin: 0 0 1.5em 0 !important;
-	border: 0 !important;
+	width: 100%;
+	padding: 0 0 1.5em 0;
+	margin-bottom: 1.5em;
+
+	border-right: 0 none;
+	border-bottom: 1px dotted rgba( 0, 0, 0, 0.3 );
 }
 	#footnote div.widget:last-child {
-		margin-bottom: 0 !important;
+		padding-bottom: 0;
+		border-bottom: 0 none;
 	}

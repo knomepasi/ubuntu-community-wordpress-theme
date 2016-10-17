@@ -1,12 +1,8 @@
 #notifications,
 #main,
-.outside {
-	width: auto;
-}
-
+.outside,
 .inside {
-	width: auto !important;
-	min-width: 0;
+	width: auto;
 }
 	#footnote .inside,
 	#footer .inside {
@@ -14,20 +10,18 @@
 		padding-right: 1.8em;
 	}
 
-.pad {
-	padding-left: 1.5em !important;
-	padding-right: 1.5em !important;
+#main .pad {
+	padding-left: 1.5em;
+	padding-right: 1.5em;
 }
 
-#header {
-	margin-bottom: 0;
+#header .inside {
+	padding: 0 0.5em;
 }
-	#header .inside {
-		padding: 0 0.5em;
-	}
 
-#notifications,
 #main {
+	margin: 0;
+	border: 0 none;
 	border-radius: 0;
 }
 	body.has-sidebar #main .pad {
@@ -41,7 +35,6 @@
 		padding: 0;
 	}
 
-#footnote,
-#footer {
-	margin-top: 0 !important;
+#notifications {
+	border-radius: 0;
 }

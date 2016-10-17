@@ -1,6 +1,6 @@
 #header .inside {
 	height: auto;
-	padding: 0 !important;
+	padding: 0;
 }
 	#header-logo,
 	#header-menu {
@@ -15,7 +15,7 @@
 			}
 			#header-logo a {
 				display: block;
-				padding: 0.4em 1.75em;
+				padding: 0.4em 1.5em;
 			}
 				#header-logo a:after {
 					content: "›";
@@ -38,11 +38,11 @@
 			#header.menu-open #header-menu {
 				display: block;
 			}
-			#header-menu li,
+			#header-menu ul.menu li,
 			#header-menu ul.children,
 			#header-menu ul.sub-menu {
-				position: static !important;
-				float: none !important;
+				position: static;
+				float: none;
 			}
 			#header-menu li.current-menu-item a,
 			#header-menu li.currrent-page-ancestor a {
@@ -51,25 +51,30 @@
 
 			#header-menu .menu > ul,
 			#header-menu ul.menu {
-				border: none;
+				border: 0 none;
 				height: auto;
 			}
-			#header-menu li {
-				border-left: none !important;
-				border-right: none !important;
+			#header-menu ul.menu li {
+				border-left: 0 none;
+				border-right: 0 none;
+			}
+			#header-menu ul.menu > li {
 				border-top: 1px solid rgba( 255, 255, 255, 0.15 );
 				border-bottom: 1px solid rgba( 0, 0, 0, 0.15 );
 			}
-				#header-menu li a {
-					padding: 0.2em 1.75em !important;
-					border: none !important;
-					border-radius: 0 !important;
+				#header-menu ul.menu li:first-child a,
+				#header-menu ul.menu li:last-child a {
+					border-radius: 0;
+				}
+				#header-menu ul.menu li a {
+					padding: 0.2em 1.75em;
+					border: 0 none;
 				}
 			#header-menu ul.children,
 			#header-menu ul.sub-menu {
 				position: static;
 				display: block;
-				width: 100% !important;
+				width: 100%;
 			}
 				#header-menu li.menu-item-has-children:hover:after {
 					display: none;
@@ -82,5 +87,5 @@
 				}
 				#header-menu ul.children li a,
 				#header-menu ul.sub-menu li a {
-					border-top: 1px solid rgba( 0, 0, 0, 0.1 ) !important;
+					border-top: 1px solid rgba( 0, 0, 0, 0.1 );
 				}

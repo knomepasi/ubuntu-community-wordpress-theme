@@ -30,24 +30,26 @@ h1, h2, h3, h4, h5, h6 {
 
 /*  Notifications  */
 #notifications h2 {
-	margin: 0 0 0 1em;
+	margin-right: 0;
+	margin-left: 1em;
 }
 
 /* Main */
 #main .post-post ul li:before {
-	content: "––";
-	padding: 0 0 0 0.7em;
+	padding-right: 0;
+	padding-left: 0.7em;
 }
 	#main .post-post li ol,
 	#main .post-post li ul {
-		margin-left: 0 !important;
-		margin-right: 2em !important;
+		margin-left: 0;
+		margin-right: 2em;
 	}
 
 /* Comments */
 .comment-meta {
 	float: right;
-	padding: 0 0 0 1em;
+	padding-right: 0;
+	padding-left: 1em;
 }
 .comment-comment {
 	width: 75%;
