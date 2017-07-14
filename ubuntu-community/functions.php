@@ -279,6 +279,20 @@ function ubuntucommunity_customize_register( $wp_customize ) {
 		'section'     => 'colors',
 	) ) );
 
+	// Always show colored footer links?
+
+	$wp_customize->add_setting( 'ubuntucommunity_footer_links_always_colored', array(
+		'default'           => false,
+		'transport'         => 'postMessage',
+	) );
+
+	$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'ubuntucommunity_footer_links_always_colored', array(
+		'type'        => 'checkbox',
+		'label'       => __( 'Always show footer links with the selected color?', 'ubuntu-community' ),
+		'section'     => 'colors',
+	) ) );
+
+
 	// Button link background color
 
 	$wp_customize->add_setting( 'ubuntucommunity_button_link_bg_color', array(
@@ -354,9 +368,13 @@ function ubuntucommunity_customizer_css( ) {
 		'ubuntucommunity_header_link_color' => '#header-menu ul.children li a:hover, #header-menu ul.sub-menu li a:hover { color: %s; }',
 		'ubuntucommunity_link_color' => '#main a, #main a:link, #main a:visited, #main a:hover, #main a:active, #main a:focus { color: %s; }',
 		'ubuntucommunity_sidebar_link_color' => '#sidebar a, #sidebar a:link, #sidebar a:visited, #sidebar a:hover, #sidebar a:active, #sidebar a:focus { color: %s; }',
-		'ubuntucommunity_footer_link_color' => '#footnote a, #footnote a:link, #footnote a:visited, #footer a:hover, #footer a:active, #footer a:focus { color: %s; }',
+		'ubuntucommunity_footer_link_color' => '#footnote a:hover, #footnote a:active, #footnote a:focus, #footer a:hover, #footer a:active, #footer a:focus { color: %s; }',
 		'ubuntucommunity_button_link_bg_color' => '#main a.button, #main a.button:link { background-color: %s; color: #fff; }'
 	);
+
+	if( get_theme_mod( 'ubuntucommunity_footer_links_always_colored' ) == true ) {
+		$mods['ubuntucommunity_footer_link_color'] = '#footnote a, #footnote a:link, #footnote a:visited, #footer a, #footer a:link, #footer a:visited, ' + $mods['ubuntucommunity_footer_link_color'];
+	}
 
 	foreach( $mods as $mod => $css_template ) {
 		if( get_theme_mod( $mod ) ) {

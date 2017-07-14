@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-04-04 20:39+0300\n"
+"POT-Creation-Date: 2017-07-15 02:10+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -95,68 +95,80 @@ msgstr ""
 msgid "Header Menu"
 msgstr ""
 
-#: functions.php:200
+#: functions.php:204
 msgid "Header logo"
 msgstr ""
 
-#: functions.php:201
+#: functions.php:205
 msgid ""
 "The logo to show in the right side of the header. The image is resized to a "
 "maximum height of 25 pixels. If an image is not set, the Ubuntu logo is used."
 msgstr ""
 
-#: functions.php:218
+#: functions.php:222
 msgid "Header background color"
 msgstr ""
 
-#: functions.php:231
+#: functions.php:235
 msgid "Navigation link color"
 msgstr ""
 
-#: functions.php:232
+#: functions.php:236
 msgid "The color for hovered menu items in the header dropdown menu."
 msgstr ""
 
-#: functions.php:245
+#: functions.php:249
 msgid "Link color"
 msgstr ""
 
-#: functions.php:246
+#: functions.php:250
 msgid "The color for links in the main content area."
 msgstr ""
 
-#: functions.php:259
+#: functions.php:263
 msgid "Sidebar link color"
 msgstr ""
 
-#: functions.php:260
+#: functions.php:264
 msgid "The color for links in the sidebar in the main content area."
 msgstr ""
 
-#: functions.php:273
+#: functions.php:277
 msgid "Footer link color"
 msgstr ""
 
-#: functions.php:274
+#: functions.php:278
 msgid "The color for links in the footer."
 msgstr ""
 
-#: functions.php:287
+#: functions.php:291
+msgid "Always show footer links with the selected color?"
+msgstr ""
+
+#: functions.php:305
 msgid "Button link background color"
 msgstr ""
 
-#: functions.php:288
+#: functions.php:306
 msgid ""
 "The background color for links styled like buttons. Note that the text color "
 "is white. This template is available from the TinyMCE editor."
 msgstr ""
 
-#: functions.php:300
+#: functions.php:318
 msgid "Use the dark background variant?"
 msgstr ""
 
-#: functions.php:320
+#: functions.php:326
+msgid "Theme Options"
+msgstr ""
+
+#: functions.php:338
 msgid "Show authors for posts?"
+msgstr ""
+
+#: functions.php:350
+msgid "Always float the header?"
 msgstr ""
 
 #: index.php:24

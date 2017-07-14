@@ -47,6 +47,17 @@ jQuery( function( ) {
 		} );
 	} );
 
+	wp.customize( 'ubuntucommunity_footer_links_always_colored', function( value ) {
+		value.bind( function( to ) {
+			if( to == true ) {
+				var footer_link_color = wp.customize.value( 'ubuntucommunity_footer_link_color' )( );
+				style.append( '#footnote a, #footnote a:link, #footnote a:visited, #footer a, #footer a:link, #footer a:visited { color: ' + footer_link_color + '; }' );
+			} else {
+				style.append( '#footnote a, #footnote a:link, #footnote a:visited, #footer a, #footer a:link, #footer a:visited { color: inherit; }' );
+			}
+		} );
+	} );
+
 	// Button links
 	wp.customize( 'ubuntucommunity_button_link_bg_color', function( value ) {
 		value.bind( function( to ) {

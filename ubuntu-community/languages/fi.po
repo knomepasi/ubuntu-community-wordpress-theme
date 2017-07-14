@@ -7,15 +7,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-04-04 20:40+0300\n"
-"PO-Revision-Date: 2016-04-04 20:42+0300\n"
+"POT-Creation-Date: 2017-07-15 02:11+0300\n"
+"PO-Revision-Date: 2017-07-15 02:11+0300\n"
 "Last-Translator: Pasi Lallinaho <pasi@shimmerproject.org>\n"
 "Language-Team: \n"
 "Language: fi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.8.4\n"
+"X-Generator: Poedit 1.8.9\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: comments.php:5
@@ -96,11 +96,11 @@ msgstr "Alatunnisteen vimpaimet"
 msgid "Header Menu"
 msgstr "Ylätunnisteen valikko"
 
-#: functions.php:200
+#: functions.php:204
 msgid "Header logo"
 msgstr "Ylätunnisteen logo"
 
-#: functions.php:201
+#: functions.php:205
 msgid ""
 "The logo to show in the right side of the header. The image is resized to a "
 "maximum height of 25 pixels. If an image is not set, the Ubuntu logo is used."
@@ -109,47 +109,51 @@ msgstr ""
 "maksimissaan 25 pikselin korkuiseksi. Jos kuvaa ei ole määritelty, käytetään "
 "Ubuntun logoa."
 
-#: functions.php:218
+#: functions.php:222
 msgid "Header background color"
 msgstr "Ylätunnisteen taustaväri"
 
-#: functions.php:231
+#: functions.php:235
 msgid "Navigation link color"
 msgstr "Navigointilinkkien väri"
 
-#: functions.php:232
+#: functions.php:236
 msgid "The color for hovered menu items in the header dropdown menu."
 msgstr "Yläpalkin pudotusvalikon linkkien väri aktivoituna."
 
-#: functions.php:245
+#: functions.php:249
 msgid "Link color"
 msgstr "Linkkien väri"
 
-#: functions.php:246
+#: functions.php:250
 msgid "The color for links in the main content area."
 msgstr "Ensisijaisen sisältöalueen linkkien väri."
 
-#: functions.php:259
+#: functions.php:263
 msgid "Sidebar link color"
 msgstr "Sivupalkin linkkien väri"
 
-#: functions.php:260
+#: functions.php:264
 msgid "The color for links in the sidebar in the main content area."
 msgstr "Linkkien väri ensisijaisen sisältöalueen sivupalkissa."
 
-#: functions.php:273
+#: functions.php:277
 msgid "Footer link color"
 msgstr "Alatunnisteen linkkien väri"
 
-#: functions.php:274
+#: functions.php:278
 msgid "The color for links in the footer."
 msgstr "Linkkien väri alatunnisteessa."
 
-#: functions.php:287
+#: functions.php:291
+msgid "Always show footer links with the selected color?"
+msgstr "Näytä alatunnisteiden linkit aina valitulla värillä?"
+
+#: functions.php:305
 msgid "Button link background color"
 msgstr "Linkkipainikkeiden taustaväri"
 
-#: functions.php:288
+#: functions.php:306
 msgid ""
 "The background color for links styled like buttons. Note that the text color "
 "is white. This template is available from the TinyMCE editor."
@@ -157,13 +161,21 @@ msgstr ""
 "Taustaväri painikkeiden näköisille linkeille. Huomioi että tekstin väri on "
 "valkoinen. Tämä malli on käytettävissä TinyMCE-editorissa."
 
-#: functions.php:300
+#: functions.php:318
 msgid "Use the dark background variant?"
 msgstr "Käytä tummaa taustaväriä?"
 
-#: functions.php:320
+#: functions.php:326
+msgid "Theme Options"
+msgstr "Teeman asetukset"
+
+#: functions.php:338
 msgid "Show authors for posts?"
 msgstr "Näytä kirjoittajan tiedot artikkeleiden yhteydessä?"
+
+#: functions.php:350
+msgid "Always float the header?"
+msgstr "Kelluva ylätunniste?"
 
 #: index.php:24
 msgid "Page not found."
